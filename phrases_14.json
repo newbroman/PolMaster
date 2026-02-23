@@ -1,0 +1,597 @@
+{
+  "level": 14,
+  "description": "Music & Pop Culture - Songs, Artists & Lyrics",
+  "tier": "PRACTICAL",
+  "phrases": [
+    {
+      "id": "s14_01",
+      "category": "Music Basics",
+      "pl": "Muzyka",
+      "en": "Music",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎵",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s14_02",
+      "category": "Music Basics",
+      "pl": "Piosenka",
+      "en": "Song",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎶",
+      "note": "Feminine noun. Plural is 'piosenki'."
+    },
+    {
+      "id": "s14_03",
+      "category": "Music Basics",
+      "pl": "Słuchać muzyki",
+      "en": "To listen to music",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎧",
+      "note": "The verb 'słuchać' requires the genitive case ('muzyki')."
+    },
+    {
+      "id": "s14_04",
+      "category": "Music Basics",
+      "pl": "Śpiewać",
+      "en": "To sing",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎤",
+      "note": "Infinitive verb."
+    },
+    {
+      "id": "s14_05",
+      "category": "Music Basics",
+      "pl": "Tańczyć",
+      "en": "To dance",
+      "level": 14,
+      "gender": null,
+      "emoji": "💃",
+      "note": "Infinitive verb."
+    },
+    {
+      "id": "s14_06",
+      "category": "Artists & Instruments",
+      "pl": "Zespół",
+      "en": "Band / Group",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎸",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_07",
+      "category": "Artists & Instruments",
+      "pl": "Piosenkarz",
+      "en": "Singer (Male)",
+      "level": 14,
+      "gender": null,
+      "emoji": "👨‍🎤",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_08",
+      "category": "Artists & Instruments",
+      "pl": "Piosenkarka",
+      "en": "Singer (Female)",
+      "level": 14,
+      "gender": null,
+      "emoji": "👩‍🎤",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s14_09",
+      "category": "Artists & Instruments",
+      "pl": "Muzyk",
+      "en": "Musician",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎷",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_10",
+      "category": "Artists & Instruments",
+      "pl": "Gitara",
+      "en": "Guitar",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎸",
+      "note": "To say 'play the guitar', use 'grać na gitarze'."
+    },
+    {
+      "id": "s14_11",
+      "category": "Artists & Instruments",
+      "pl": "Pianino",
+      "en": "Piano",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎹",
+      "note": "Neuter noun. Use 'grać na pianinie'."
+    },
+    {
+      "id": "s14_12",
+      "category": "Artists & Instruments",
+      "pl": "Perkusja",
+      "en": "Drums",
+      "level": 14,
+      "gender": null,
+      "emoji": "🥁",
+      "note": "Feminine noun. Use 'grać na perkusji'."
+    },
+    {
+      "id": "s14_13",
+      "category": "Media & Streaming",
+      "pl": "Album",
+      "en": "Album",
+      "level": 14,
+      "gender": null,
+      "emoji": "💿",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_14",
+      "category": "Media & Streaming",
+      "pl": "Płyta",
+      "en": "Record / CD / Vinyl",
+      "level": 14,
+      "gender": null,
+      "emoji": "📀",
+      "note": "Feminine noun. Also used for a stovetop!"
+    },
+    {
+      "id": "s14_15",
+      "category": "Media & Streaming",
+      "pl": "Playlista",
+      "en": "Playlist",
+      "level": 14,
+      "gender": null,
+      "emoji": "📱",
+      "note": "Modern loanword. Feminine noun."
+    },
+    {
+      "id": "s14_16",
+      "category": "Media & Streaming",
+      "pl": "Teledysk",
+      "en": "Music video",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎬",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_17",
+      "category": "Media & Streaming",
+      "pl": "Podcast",
+      "en": "Podcast",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎙️",
+      "note": "Pronounced exactly as in English."
+    },
+    {
+      "id": "s14_18",
+      "category": "Media & Streaming",
+      "pl": "Podgłośnij",
+      "en": "Turn it up (Volume)",
+      "level": 14,
+      "gender": null,
+      "emoji": "🔊",
+      "note": "Imperative verb. Derived from 'głośno' (loud)."
+    },
+    {
+      "id": "s14_19",
+      "category": "Media & Streaming",
+      "pl": "Ścisz to",
+      "en": "Turn it down",
+      "level": 14,
+      "gender": null,
+      "emoji": "🔉",
+      "note": "Imperative verb. Derived from 'cicho' (quiet)."
+    },
+    {
+      "id": "s14_20",
+      "category": "Genres",
+      "pl": "Jaka muzyka ci się podoba?",
+      "en": "What music do you like?",
+      "level": 14,
+      "gender": null,
+      "emoji": "🤔",
+      "note": "Literally 'What music pleases itself to you?'."
+    },
+    {
+      "id": "s14_21",
+      "category": "Genres",
+      "pl": "Rock",
+      "en": "Rock",
+      "level": 14,
+      "gender": null,
+      "emoji": "🤘",
+      "note": "Pronounced with a rolled 'r'."
+    },
+    {
+      "id": "s14_22",
+      "category": "Genres",
+      "pl": "Muzyka pop",
+      "en": "Pop music",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎤",
+      "note": "Feminine noun phrase."
+    },
+    {
+      "id": "s14_23",
+      "category": "Genres",
+      "pl": "Jazz",
+      "en": "Jazz",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎷",
+      "note": "Pronounced 'Dżez'."
+    },
+    {
+      "id": "s14_24",
+      "category": "Genres",
+      "pl": "Muzyka klasyczna",
+      "en": "Classical music",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎻",
+      "note": "Feminine noun phrase."
+    },
+    {
+      "id": "s14_25",
+      "category": "Genres",
+      "pl": "Hip-hop",
+      "en": "Hip-hop",
+      "level": 14,
+      "gender": null,
+      "emoji": "🧢",
+      "note": "Massively popular genre in Poland."
+    },
+    {
+      "id": "s14_26",
+      "category": "Genres",
+      "pl": "Muzyka elektroniczna",
+      "en": "Electronic music",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎛️",
+      "note": "Feminine noun phrase."
+    },
+    {
+      "id": "s14_27",
+      "category": "Genres",
+      "pl": "Reggae",
+      "en": "Reggae",
+      "level": 14,
+      "gender": null,
+      "emoji": "🇯🇲",
+      "note": "Pronounced with a hard 'g'."
+    },
+    {
+      "id": "s14_28",
+      "category": "Genres",
+      "pl": "Metal",
+      "en": "Metal",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎸",
+      "note": "Pronounced 'Me-tal'."
+    },
+    {
+      "id": "s14_29",
+      "category": "Genres",
+      "pl": "Muzyka ludowa",
+      "en": "Folk music",
+      "level": 14,
+      "gender": null,
+      "emoji": "🪗",
+      "note": "Traditional Polish folk music from the mountains or countryside."
+    },
+    {
+      "id": "s14_30",
+      "category": "Talking About Music",
+      "pl": "Ulubiony zespół",
+      "en": "Favorite band",
+      "level": 14,
+      "gender": null,
+      "emoji": "⭐",
+      "note": "Masculine adjective 'ulubiony'."
+    },
+    {
+      "id": "s14_31",
+      "category": "Talking About Music",
+      "pl": "Ulubiona piosenka",
+      "en": "Favorite song",
+      "level": 14,
+      "gender": null,
+      "emoji": "❤️",
+      "note": "Feminine adjective 'ulubiona'."
+    },
+    {
+      "id": "s14_32",
+      "category": "Talking About Music",
+      "pl": "To jest świetna piosenka!",
+      "en": "This is a great song!",
+      "level": 14,
+      "gender": null,
+      "emoji": "🔥",
+      "note": "'Świetna' means excellent or great."
+    },
+    {
+      "id": "s14_33",
+      "category": "Talking About Music",
+      "pl": "Znam tę piosenkę",
+      "en": "I know this song",
+      "level": 14,
+      "gender": null,
+      "emoji": "🙋",
+      "note": "Uses the accusative case 'tę piosenkę'."
+    },
+    {
+      "id": "s14_34",
+      "category": "Song Elements",
+      "pl": "Tekst piosenki",
+      "en": "Lyrics",
+      "level": 14,
+      "gender": null,
+      "emoji": "📝",
+      "note": "Literally 'text of the song'."
+    },
+    {
+      "id": "s14_35",
+      "category": "Song Elements",
+      "pl": "Refren",
+      "en": "Chorus",
+      "level": 14,
+      "gender": null,
+      "emoji": "🔁",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_36",
+      "category": "Song Elements",
+      "pl": "Zwrotka",
+      "en": "Verse",
+      "level": 14,
+      "gender": null,
+      "emoji": "📖",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s14_37",
+      "category": "Song Elements",
+      "pl": "Melodia",
+      "en": "Melody",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎼",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s14_38",
+      "category": "Song Elements",
+      "pl": "Rytm",
+      "en": "Rhythm",
+      "level": 14,
+      "gender": null,
+      "emoji": "🥁",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_39",
+      "category": "Pop Song Vocab",
+      "pl": "Kocham cię",
+      "en": "I love you",
+      "level": 14,
+      "gender": null,
+      "emoji": "❤️",
+      "note": "The most common phrase in Polish pop music!"
+    },
+    {
+      "id": "s14_40",
+      "category": "Pop Song Vocab",
+      "pl": "Tęsknię za tobą",
+      "en": "I miss you",
+      "level": 14,
+      "gender": null,
+      "emoji": "🥺",
+      "note": "Uses 'za' + instrumental case 'tobą'."
+    },
+    {
+      "id": "s14_41",
+      "category": "Pop Song Vocab",
+      "pl": "Jesteś moim światem",
+      "en": "You are my world",
+      "level": 14,
+      "gender": null,
+      "emoji": "🌍",
+      "note": "Instrumental case 'moim światem' after 'jesteś' (you are)."
+    },
+    {
+      "id": "s14_42",
+      "category": "Pop Song Vocab",
+      "pl": "Serce",
+      "en": "Heart",
+      "level": 14,
+      "gender": null,
+      "emoji": "🫀",
+      "note": "Neuter noun."
+    },
+    {
+      "id": "s14_43",
+      "category": "Pop Song Vocab",
+      "pl": "Zawsze",
+      "en": "Always / Forever",
+      "level": 14,
+      "gender": null,
+      "emoji": "♾️",
+      "note": "Adverb."
+    },
+    {
+      "id": "s14_44",
+      "category": "Pop Song Vocab",
+      "pl": "Nigdy",
+      "en": "Never",
+      "level": 14,
+      "gender": null,
+      "emoji": "❌",
+      "note": "Adverb. Used with a double negative in Polish sentences."
+    },
+    {
+      "id": "s14_45",
+      "category": "Pop Song Vocab",
+      "pl": "Razem",
+      "en": "Together",
+      "level": 14,
+      "gender": null,
+      "emoji": "🫂",
+      "note": "Adverb."
+    },
+    {
+      "id": "s14_46",
+      "category": "Pop Song Vocab",
+      "pl": "Marzenie",
+      "en": "Dream / Wish",
+      "level": 14,
+      "gender": null,
+      "emoji": "✨",
+      "note": "Refers to a life goal or wish, not the dream you have while sleeping (which is 'sen')."
+    },
+    {
+      "id": "s14_47",
+      "category": "Pop Song Vocab",
+      "pl": "Chodź ze mną",
+      "en": "Come with me",
+      "level": 14,
+      "gender": null,
+      "emoji": "🤝",
+      "note": "Imperative phrase."
+    },
+    {
+      "id": "s14_48",
+      "category": "Polish Music Culture",
+      "pl": "Czy znasz polską muzykę?",
+      "en": "Do you know Polish music?",
+      "level": 14,
+      "gender": null,
+      "emoji": "🇵🇱",
+      "note": "A great icebreaker with locals."
+    },
+    {
+      "id": "s14_49",
+      "category": "Polish Music Culture",
+      "pl": "Dawid Podsiadło",
+      "en": "Dawid Podsiadło",
+      "level": 14,
+      "gender": null,
+      "emoji": "👨‍🎤",
+      "note": "Currently one of the most famous male pop/indie artists in Poland."
+    },
+    {
+      "id": "s14_50",
+      "category": "Polish Music Culture",
+      "pl": "Sanah",
+      "en": "Sanah",
+      "level": 14,
+      "gender": null,
+      "emoji": "👩‍🎤",
+      "note": "Extremely popular Polish female indie-pop singer."
+    },
+    {
+      "id": "s14_51",
+      "category": "Polish Music Culture",
+      "pl": "Taco Hemingway",
+      "en": "Taco Hemingway",
+      "level": 14,
+      "gender": null,
+      "emoji": "🧢",
+      "note": "One of Poland's most famous modern rappers."
+    },
+    {
+      "id": "s14_52",
+      "category": "Polish Music Culture",
+      "pl": "Czesław Niemen",
+      "en": "Czesław Niemen",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎸",
+      "note": "A legendary 20th-century Polish artist, famous for the song 'Dziwny jest ten świat'."
+    },
+    {
+      "id": "s14_53",
+      "category": "Polish Music Culture",
+      "pl": "Disco polo",
+      "en": "Disco polo",
+      "level": 14,
+      "gender": null,
+      "emoji": "🪩",
+      "note": "A highly controversial but popular Polish genre of electronic dance music often played at weddings."
+    },
+    {
+      "id": "s14_54",
+      "category": "Polish Music Culture",
+      "pl": "Hit / Przebój",
+      "en": "Hit song",
+      "level": 14,
+      "gender": null,
+      "emoji": "🔥",
+      "note": "Both words mean a widely popular song."
+    },
+    {
+      "id": "s14_55",
+      "category": "Concerts",
+      "pl": "Koncert na żywo",
+      "en": "Live concert",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎟️",
+      "note": "Literally 'concert on alive'."
+    },
+    {
+      "id": "s14_56",
+      "category": "Concerts",
+      "pl": "Bilet na koncert",
+      "en": "Concert ticket",
+      "level": 14,
+      "gender": null,
+      "emoji": "🎫",
+      "note": "Accusative case after 'na'."
+    },
+    {
+      "id": "s14_57",
+      "category": "Concerts",
+      "pl": "Scena",
+      "en": "Stage",
+      "level": 14,
+      "gender": null,
+      "emoji": "🏗️",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s14_58",
+      "category": "Concerts",
+      "pl": "Tłum",
+      "en": "Crowd",
+      "level": 14,
+      "gender": null,
+      "emoji": "👥",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s14_59",
+      "category": "Concerts",
+      "pl": "Bis",
+      "en": "Encore",
+      "level": 14,
+      "gender": null,
+      "emoji": "👏",
+      "note": "The crowd will chant 'Bis! Bis!' at the end of a concert."
+    }
+  ]
+}

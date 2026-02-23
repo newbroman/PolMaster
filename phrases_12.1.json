@@ -1,0 +1,107 @@
+{
+  "level": 12.1,
+  "description": "Home Life - Cooking, Furniture & Garden",
+  "tier": "PRACTICAL",
+  "phrases": [
+    {
+      "id": "s12.1_01",
+      "category": "Kitchen",
+      "pl": "Gotować",
+      "en": "To cook",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🍳",
+      "note": "Infinitive verb."
+    },
+    {
+      "id": "s12.1_02",
+      "category": "Kitchen",
+      "pl": "Przepis",
+      "en": "Recipe",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "📖",
+      "note": "Masculine noun. Also means 'regulation' in other contexts."
+    },
+    {
+      "id": "s12.1_03",
+      "category": "Kitchen",
+      "pl": "Deska do krojenia",
+      "en": "Cutting board",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🔪",
+      "note": "Literally 'board for cutting'."
+    },
+    {
+      "id": "s12.1_04",
+      "category": "Kitchen",
+      "pl": "Lodówka",
+      "en": "Refrigerator / Fridge",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🧊",
+      "note": "From 'lód' (ice)."
+    },
+    {
+      "id": "s12.1_05",
+      "category": "Kitchen",
+      "pl": "Zmywarka",
+      "en": "Dishwasher",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🧼",
+      "note": "From 'zmywać' (to wash dishes)."
+    },
+    {
+      "id": "s12.1_06",
+      "category": "Furniture",
+      "pl": "Kanapa",
+      "en": "Sofa / Couch",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🛋️",
+      "note": "A feminine noun. Poles often use 'sofa' and 'kanapa' interchangeably."
+    },
+    {
+      "id": "s12.1_07",
+      "category": "Furniture",
+      "pl": "Szafa",
+      "en": "Wardrobe / Closet",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "👗",
+      "note": "Crucial word for where you keep your clothes."
+    },
+    {
+      "id": "s12.1_08",
+      "category": "Gardening",
+      "pl": "Ogródek",
+      "en": "Small garden",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🏡",
+      "note": "Diminutive of 'ogród'. Often used for backyard gardens."
+    },
+    {
+      "id": "s12.1_09",
+      "category": "Gardening",
+      "pl": "Podlewać",
+      "en": "To water",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🚿",
+      "note": "E.g., 'Podlewać kwiaty' (To water the flowers)."
+    },
+    {
+      "id": "s12.1_10",
+      "category": "Gardening",
+      "pl": "Kosić trawę",
+      "en": "To mow the lawn",
+      "level": 12.1,
+      "gender": null,
+      "emoji": "🚜",
+      "note": "'Trawę' is the accusative case of 'trawa' (grass)."
+    }
+  ]
+}

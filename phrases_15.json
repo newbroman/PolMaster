@@ -1,0 +1,491 @@
+{
+  "level": 15,
+  "description": "Work & Business - Professional Situations & Office Life",
+  "tier": "PRACTICAL",
+  "phrases": [
+    {
+      "id": "s15_01",
+      "category": "Work Basics",
+      "pl": "Praca",
+      "en": "Work / Job",
+      "level": 15,
+      "gender": null,
+      "emoji": "💼",
+      "note": "Feminine noun. 'Idę do pracy' means 'I am going to work'."
+    },
+    {
+      "id": "s15_02",
+      "category": "Work Basics",
+      "pl": "Biuro",
+      "en": "Office",
+      "level": 15,
+      "gender": null,
+      "emoji": "🏢",
+      "note": "Neuter noun."
+    },
+    {
+      "id": "s15_03",
+      "category": "Work Basics",
+      "pl": "Firma",
+      "en": "Company",
+      "level": 15,
+      "gender": null,
+      "emoji": "🏢",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s15_04",
+      "category": "Work Basics",
+      "pl": "Pracuję w korporacji",
+      "en": "I work in a corporation",
+      "level": 15,
+      "gender": null,
+      "emoji": "👔",
+      "note": "Often shortened in slang to 'pracuję w korpo'."
+    },
+    {
+      "id": "s15_05",
+      "category": "Work Basics",
+      "pl": "Praca zdalna",
+      "en": "Remote work",
+      "level": 15,
+      "gender": null,
+      "emoji": "💻",
+      "note": "Feminine noun phrase. 'Pracuję zdalnie' = I work remotely."
+    },
+    {
+      "id": "s15_06",
+      "category": "Work Basics",
+      "pl": "Pracuję z domu",
+      "en": "I work from home",
+      "level": 15,
+      "gender": null,
+      "emoji": "🏠",
+      "note": "Literally 'I work from house'."
+    },
+    {
+      "id": "s15_07",
+      "category": "People",
+      "pl": "Szef",
+      "en": "Boss",
+      "level": 15,
+      "gender": null,
+      "emoji": "👨‍💼",
+      "note": "A female boss is a 'Szefowa'."
+    },
+    {
+      "id": "s15_08",
+      "category": "People",
+      "pl": "Menedżer",
+      "en": "Manager",
+      "level": 15,
+      "gender": null,
+      "emoji": "📊",
+      "note": "Loanword. Pronounced the English way but spelled phonetically."
+    },
+    {
+      "id": "s15_09",
+      "category": "People",
+      "pl": "Kolega z pracy",
+      "en": "Coworker (Male)",
+      "level": 15,
+      "gender": null,
+      "emoji": "👨‍💻",
+      "note": "Literally 'Colleague from work'."
+    },
+    {
+      "id": "s15_10",
+      "category": "People",
+      "pl": "Koleżanka z pracy",
+      "en": "Coworker (Female)",
+      "level": 15,
+      "gender": null,
+      "emoji": "👩‍💻",
+      "note": "Literally 'Female colleague from work'."
+    },
+    {
+      "id": "s15_11",
+      "category": "People",
+      "pl": "Klient",
+      "en": "Client",
+      "level": 15,
+      "gender": null,
+      "emoji": "🤝",
+      "note": "Masculine noun. Female is 'Klientka'."
+    },
+    {
+      "id": "s15_12",
+      "category": "Meetings & Events",
+      "pl": "Spotkanie",
+      "en": "Meeting",
+      "level": 15,
+      "gender": null,
+      "emoji": "🗣️",
+      "note": "Neuter noun."
+    },
+    {
+      "id": "s15_13",
+      "category": "Meetings & Events",
+      "pl": "Konferencja",
+      "en": "Conference",
+      "level": 15,
+      "gender": null,
+      "emoji": "🎤",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s15_14",
+      "category": "Meetings & Events",
+      "pl": "Prezentacja",
+      "en": "Presentation",
+      "level": 15,
+      "gender": null,
+      "emoji": "📈",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s15_15",
+      "category": "Meetings & Events",
+      "pl": "Rozmowa kwalifikacyjna",
+      "en": "Job interview",
+      "level": 15,
+      "gender": null,
+      "emoji": "📋",
+      "note": "Literally 'qualifying conversation'."
+    },
+    {
+      "id": "s15_16",
+      "category": "Meetings & Events",
+      "pl": "Jestem na spotkaniu",
+      "en": "I'm in a meeting",
+      "level": 15,
+      "gender": null,
+      "emoji": "🤫",
+      "note": "Uses the locative case 'na spotkaniu'."
+    },
+    {
+      "id": "s15_17",
+      "category": "Meetings & Events",
+      "pl": "Agenda",
+      "en": "Agenda",
+      "level": 15,
+      "gender": null,
+      "emoji": "📑",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s15_18",
+      "category": "Meetings & Events",
+      "pl": "Notatki",
+      "en": "Notes",
+      "level": 15,
+      "gender": null,
+      "emoji": "📝",
+      "note": "Plural noun. Singular is 'notatka'."
+    },
+    {
+      "id": "s15_19",
+      "category": "Tasks & Output",
+      "pl": "Projekt",
+      "en": "Project",
+      "level": 15,
+      "gender": null,
+      "emoji": "🏗️",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s15_20",
+      "category": "Tasks & Output",
+      "pl": "Raport",
+      "en": "Report",
+      "level": 15,
+      "gender": null,
+      "emoji": "📊",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s15_21",
+      "category": "Tasks & Output",
+      "pl": "Dokument",
+      "en": "Document",
+      "level": 15,
+      "gender": null,
+      "emoji": "📄",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s15_22",
+      "category": "Tasks & Output",
+      "pl": "Termin",
+      "en": "Deadline",
+      "level": 15,
+      "gender": null,
+      "emoji": "⏳",
+      "note": "Also means a scheduled appointment."
+    },
+    {
+      "id": "s15_23",
+      "category": "Tasks & Output",
+      "pl": "Zadanie",
+      "en": "Task",
+      "level": 15,
+      "gender": null,
+      "emoji": "✅",
+      "note": "Neuter noun."
+    },
+    {
+      "id": "s15_24",
+      "category": "HR & Admin",
+      "pl": "Umowa o pracę",
+      "en": "Employment contract",
+      "level": 15,
+      "gender": null,
+      "emoji": "✒️",
+      "note": "The standard full-time Polish labor contract with maximum benefits."
+    },
+    {
+      "id": "s15_25",
+      "category": "HR & Admin",
+      "pl": "Podpis",
+      "en": "Signature",
+      "level": 15,
+      "gender": null,
+      "emoji": "✍️",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s15_26",
+      "category": "HR & Admin",
+      "pl": "Proszę podpisać tutaj",
+      "en": "Please sign here",
+      "level": 15,
+      "gender": null,
+      "emoji": "👇",
+      "note": "Infinitive phrase."
+    },
+    {
+      "id": "s15_27",
+      "category": "HR & Admin",
+      "pl": "Wynagrodzenie",
+      "en": "Salary / Remuneration",
+      "level": 15,
+      "gender": null,
+      "emoji": "💰",
+      "note": "A very formal word. Casually, Poles say 'pensja' or 'wypłata'."
+    },
+    {
+      "id": "s15_28",
+      "category": "HR & Admin",
+      "pl": "Awans",
+      "en": "Promotion",
+      "level": 15,
+      "gender": null,
+      "emoji": "📈",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s15_29",
+      "category": "HR & Admin",
+      "pl": "Urlop",
+      "en": "Vacation / Paid leave",
+      "level": 15,
+      "gender": null,
+      "emoji": "🏖️",
+      "note": "Full-time Polish employees legally get 20 or 26 days of 'urlop' per year."
+    },
+    {
+      "id": "s15_30",
+      "category": "HR & Admin",
+      "pl": "Nadgodziny",
+      "en": "Overtime",
+      "level": 15,
+      "gender": null,
+      "emoji": "🕰️",
+      "note": "Plural noun."
+    },
+    {
+      "id": "s15_31",
+      "category": "Networking",
+      "pl": "Wizytówka",
+      "en": "Business card",
+      "level": 15,
+      "gender": null,
+      "emoji": "🪪",
+      "note": "Feminine noun."
+    },
+    {
+      "id": "s15_32",
+      "category": "Networking",
+      "pl": "Czy mogę dostać wizytówkę?",
+      "en": "Can I have your business card?",
+      "level": 15,
+      "gender": null,
+      "emoji": "🤝",
+      "note": "Literally 'Can I get a business card?'."
+    },
+    {
+      "id": "s15_33",
+      "category": "Communication",
+      "pl": "Zadzwonię później",
+      "en": "I'll call later",
+      "level": 15,
+      "gender": null,
+      "emoji": "📞",
+      "note": "Future tense."
+    },
+    {
+      "id": "s15_34",
+      "category": "Communication",
+      "pl": "Wyślę email",
+      "en": "I'll send an email",
+      "level": 15,
+      "gender": null,
+      "emoji": "📧",
+      "note": "Future tense."
+    },
+    {
+      "id": "s15_35",
+      "category": "Communication",
+      "pl": "Załącznik",
+      "en": "Attachment",
+      "level": 15,
+      "gender": null,
+      "emoji": "📎",
+      "note": "Masculine noun."
+    },
+    {
+      "id": "s15_36",
+      "category": "Communication",
+      "pl": "Wyślę w załączniku",
+      "en": "I'll send it as an attachment",
+      "level": 15,
+      "gender": null,
+      "emoji": "📥",
+      "note": "Locative case 'w załączniku'."
+    },
+    {
+      "id": "s15_37",
+      "category": "Communication",
+      "pl": "Proszę o potwierdzenie",
+      "en": "Please confirm",
+      "level": 15,
+      "gender": null,
+      "emoji": "✅",
+      "note": "Literally 'I ask for confirmation'."
+    },
+    {
+      "id": "s15_38",
+      "category": "Communication",
+      "pl": "Zgadzam się",
+      "en": "I agree",
+      "level": 15,
+      "gender": null,
+      "emoji": "👍",
+      "note": "Reflexive verb."
+    },
+    {
+      "id": "s15_39",
+      "category": "Communication",
+      "pl": "Nie zgadzam się",
+      "en": "I disagree",
+      "level": 15,
+      "gender": null,
+      "emoji": "👎",
+      "note": "Add 'nie' before the verb."
+    },
+    {
+      "id": "s15_40",
+      "category": "Communication",
+      "pl": "Proszę wyjaśnić",
+      "en": "Please explain",
+      "level": 15,
+      "gender": null,
+      "emoji": "🗣️",
+      "note": "Infinitive phrase."
+    },
+    {
+      "id": "s15_41",
+      "category": "Communication",
+      "pl": "Muszę to sprawdzić",
+      "en": "I need to check this",
+      "level": 15,
+      "gender": null,
+      "emoji": "🔍",
+      "note": "Infinitive verb."
+    },
+    {
+      "id": "s15_42",
+      "category": "Communication",
+      "pl": "Muszę to przemyśleć",
+      "en": "I need to think about it",
+      "level": 15,
+      "gender": null,
+      "emoji": "🤔",
+      "note": "Literally 'I must over-think it'."
+    },
+    {
+      "id": "s15_43",
+      "category": "Communication",
+      "pl": "Dam Panu/Pani znać",
+      "en": "I'll let you know",
+      "level": 15,
+      "gender": "both",
+      "variants": {
+        "m": "Dam Panu znać",
+        "f": "Dam Pani znać"
+      },
+      "emoji": "🔔",
+      "note": "Formal phrase. Uses dative case 'Panu' (to Sir) or 'Pani' (to Madam)."
+    },
+    {
+      "id": "s15_44",
+      "category": "Professional Requests",
+      "pl": "Czy możesz to zrobić?",
+      "en": "Can you do this?",
+      "level": 15,
+      "gender": null,
+      "emoji": "🛠️",
+      "note": "Casual phrasing ('możesz') suitable for a direct coworker."
+    },
+    {
+      "id": "s15_45",
+      "category": "Professional Requests",
+      "pl": "Potrzebuję tego do piątku",
+      "en": "I need this by Friday",
+      "level": 15,
+      "gender": null,
+      "emoji": "📅",
+      "note": "The preposition 'do' takes the genitive case 'piątku'."
+    },
+    {
+      "id": "s15_46",
+      "category": "Professional Requests",
+      "pl": "To jest pilne",
+      "en": "This is urgent",
+      "level": 15,
+      "gender": null,
+      "emoji": "🚨",
+      "note": "Neuter adjective matching 'To'."
+    },
+    {
+      "id": "s15_47",
+      "category": "Professional Requests",
+      "pl": "Nie ma pośpiechu",
+      "en": "No rush",
+      "level": 15,
+      "gender": null,
+      "emoji": "😌",
+      "note": "Literally 'There is no rush'."
+    },
+    {
+      "id": "s15_48",
+      "category": "Professional Requests",
+      "pl": "Proszę to poprawić",
+      "en": "Please correct this",
+      "level": 15,
+      "gender": null,
+      "emoji": "✏️",
+      "note": "Infinitive phrase."
+    }
+  ]
+}

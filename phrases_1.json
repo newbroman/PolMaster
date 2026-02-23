@@ -1,0 +1,707 @@
+{
+  "level": 1,
+  "description": "Pronunciation Foundation - Master the Alphabet",
+  "tier": "FOUNDATION",
+  "phrases": [
+    {
+      "id": "p1_01",
+      "category": "CZ & SZ (Hard Sounds)",
+      "pl": "Czas",
+      "en": "Time",
+      "level": 1,
+      "gender": null,
+      "emoji": "⏳",
+      "note": "The 'cz' sound is like a hard 'ch' in 'chalk', but with the tongue curled back slightly."
+    },
+    {
+      "id": "p1_02",
+      "category": "CZ & SZ (Hard Sounds)",
+      "pl": "Człowiek",
+      "en": "Human / Person",
+      "level": 1,
+      "gender": null,
+      "emoji": "👤",
+      "note": "Combines the hard 'cz' with the English 'w' sound of the Polish 'ł'."
+    },
+    {
+      "id": "p1_03",
+      "category": "CZ & SZ (Hard Sounds)",
+      "pl": "Czapka",
+      "en": "Cap / Hat",
+      "level": 1,
+      "gender": null,
+      "emoji": "🧢",
+      "note": "A very common word. Make sure to hit the 'cz' hard!"
+    },
+    {
+      "id": "p1_04",
+      "category": "CZ & SZ (Hard Sounds)",
+      "pl": "Szafa",
+      "en": "Closet / Wardrobe",
+      "level": 1,
+      "gender": null,
+      "emoji": "🚪",
+      "note": "The 'sz' is like the 'sh' in 'shoe', but harder and deeper."
+    },
+    {
+      "id": "p1_05",
+      "category": "CZ & SZ (Hard Sounds)",
+      "pl": "Szkoła",
+      "en": "School",
+      "level": 1,
+      "gender": null,
+      "emoji": "🏫",
+      "note": "Pronounced 'Sh-ko-wa'."
+    },
+    {
+      "id": "p1_06",
+      "category": "CZ & SZ (Hard Sounds)",
+      "pl": "Mysz",
+      "en": "Mouse",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐁",
+      "note": "A great word to practice ending a word on a hard, rustling consonant."
+    },
+    {
+      "id": "p1_07",
+      "category": "RZ & Ż (Voiced Sounds)",
+      "pl": "Rzeka",
+      "en": "River",
+      "level": 1,
+      "gender": null,
+      "emoji": "🏞️",
+      "note": "The 'rz' sound is exactly the same as the 'ż' sound (like the 's' in 'pleasure')."
+    },
+    {
+      "id": "p1_08",
+      "category": "RZ & Ż (Voiced Sounds)",
+      "pl": "Drzewo",
+      "en": "Tree",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌳",
+      "note": "The 'd' blends into the 'rz'. Pronounced 'D-zhe-vo'."
+    },
+    {
+      "id": "p1_09",
+      "category": "RZ & Ż (Voiced Sounds)",
+      "pl": "Grzyb",
+      "en": "Mushroom",
+      "level": 1,
+      "gender": null,
+      "emoji": "🍄",
+      "note": "Mushroom foraging is a national sport in Poland. Pronounced 'G-zhip'."
+    },
+    {
+      "id": "p1_10",
+      "category": "RZ & Ż (Voiced Sounds)",
+      "pl": "Żaba",
+      "en": "Frog",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐸",
+      "note": "Spelled with a dot over the Z, but sounds identical to 'rz'."
+    },
+    {
+      "id": "p1_11",
+      "category": "RZ & Ż (Voiced Sounds)",
+      "pl": "Życie",
+      "en": "Life",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌱",
+      "note": "Pronounced 'Zhi-cheh'."
+    },
+    {
+      "id": "p1_12",
+      "category": "RZ & Ż (Voiced Sounds)",
+      "pl": "Nóż",
+      "en": "Knife",
+      "level": 1,
+      "gender": null,
+      "emoji": "🔪",
+      "note": "Grammar rule: A voiced 'ż' at the very end of a word loses its voice and sounds like a hard 'sz'."
+    },
+    {
+      "id": "p1_13",
+      "category": "Soft Sounds (Ś, Ź, Ć, DŹ)",
+      "pl": "Śnieg",
+      "en": "Snow",
+      "level": 1,
+      "gender": null,
+      "emoji": "❄️",
+      "note": "The 'ś' is much softer and lighter than 'sz'. Try smiling while making a 'sh' sound."
+    },
+    {
+      "id": "p1_14",
+      "category": "Soft Sounds (Ś, Ź, Ć, DŹ)",
+      "pl": "Świat",
+      "en": "World",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌍",
+      "note": "Pronounced 'Sh-vyat'."
+    },
+    {
+      "id": "p1_15",
+      "category": "Soft Sounds (Ś, Ź, Ć, DŹ)",
+      "pl": "Źródło",
+      "en": "Source / Spring",
+      "level": 1,
+      "gender": null,
+      "emoji": "⛲",
+      "note": "The rarest Polish letter. A very soft, buzzing 'z' sound."
+    },
+    {
+      "id": "p1_16",
+      "category": "Soft Sounds (Ś, Ź, Ć, DŹ)",
+      "pl": "Ćma",
+      "en": "Moth",
+      "level": 1,
+      "gender": null,
+      "emoji": "🦋",
+      "note": "A very soft 'ch' sound, made by pressing the tongue to the back of the front teeth."
+    },
+    {
+      "id": "p1_17",
+      "category": "Soft Sounds (Ś, Ź, Ć, DŹ)",
+      "pl": "Niedźwiedź",
+      "en": "Bear",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐻",
+      "note": "The 'dź' is a very soft 'j' sound (like in 'jeep'). This word ends with it!"
+    },
+    {
+      "id": "p1_18",
+      "category": "Soft Sounds (Ś, Ź, Ć, DŹ)",
+      "pl": "Dźwięk",
+      "en": "Sound",
+      "level": 1,
+      "gender": null,
+      "emoji": "🔔",
+      "note": "Contains the soft 'dź' and the nasal 'ę'."
+    },
+    {
+      "id": "p1_19",
+      "category": "Soft Vowels (NI, SI, ZI, CI)",
+      "pl": "Niebo",
+      "en": "Sky / Heaven",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌌",
+      "note": "When 'i' follows 'n', it makes the 'n' soft (like 'nyeh' in 'canyon')."
+    },
+    {
+      "id": "p1_20",
+      "category": "Soft Vowels (NI, SI, ZI, CI)",
+      "pl": "Siostra",
+      "en": "Sister",
+      "level": 1,
+      "gender": null,
+      "emoji": "👧",
+      "note": "When 'i' follows 's', it sounds exactly like 'ś' (soft sh)."
+    },
+    {
+      "id": "p1_21",
+      "category": "Soft Vowels (NI, SI, ZI, CI)",
+      "pl": "Zima",
+      "en": "Winter",
+      "level": 1,
+      "gender": null,
+      "emoji": "⛄",
+      "note": "When 'i' follows 'z', it sounds exactly like 'ź'."
+    },
+    {
+      "id": "p1_22",
+      "category": "Soft Vowels (NI, SI, ZI, CI)",
+      "pl": "Cicho",
+      "en": "Quiet",
+      "level": 1,
+      "gender": null,
+      "emoji": "🤫",
+      "note": "When 'i' follows 'c', it sounds exactly like 'ć' (soft ch)."
+    },
+    {
+      "id": "p1_23",
+      "category": "Soft Vowels (NI, SI, ZI, CI)",
+      "pl": "Dziadek",
+      "en": "Grandfather",
+      "level": 1,
+      "gender": null,
+      "emoji": "👴",
+      "note": "When 'i' follows 'dz', it sounds exactly like 'dź' (soft j)."
+    },
+    {
+      "id": "p1_24",
+      "category": "Soft Vowels (NI, SI, ZI, CI)",
+      "pl": "Dziecko",
+      "en": "Child",
+      "level": 1,
+      "gender": null,
+      "emoji": "🧒",
+      "note": "Pronounced 'Jyeh-tsko'."
+    },
+    {
+      "id": "p1_25",
+      "category": "The Ł vs L",
+      "pl": "Łódka",
+      "en": "Boat",
+      "level": 1,
+      "gender": null,
+      "emoji": "⛵",
+      "note": "The Polish 'ł' is pronounced exactly like the English 'w' in 'water'."
+    },
+    {
+      "id": "p1_26",
+      "category": "The Ł vs L",
+      "pl": "Głowa",
+      "en": "Head",
+      "level": 1,
+      "gender": null,
+      "emoji": "🗣️",
+      "note": "Pronounced 'Gwo-va'."
+    },
+    {
+      "id": "p1_27",
+      "category": "The Ł vs L",
+      "pl": "Słońce",
+      "en": "Sun",
+      "level": 1,
+      "gender": null,
+      "emoji": "☀️",
+      "note": "Contains the 'w' sound, followed by the soft 'ń'."
+    },
+    {
+      "id": "p1_28",
+      "category": "The Ł vs L",
+      "pl": "Lalka",
+      "en": "Doll",
+      "level": 1,
+      "gender": null,
+      "emoji": "🪆",
+      "note": "The normal 'L' in Polish is soft and crisp, like in 'leaf'."
+    },
+    {
+      "id": "p1_29",
+      "category": "The Ł vs L",
+      "pl": "Las",
+      "en": "Forest",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌲",
+      "note": "Simple and crisp."
+    },
+    {
+      "id": "p1_30",
+      "category": "The Ł vs L",
+      "pl": "Lato",
+      "en": "Summer",
+      "level": 1,
+      "gender": null,
+      "emoji": "🏖️",
+      "note": "A very straightforward phonetic word."
+    },
+    {
+      "id": "p1_31",
+      "category": "Nasal Vowels (Ą & Ę)",
+      "pl": "Mąż",
+      "en": "Husband",
+      "level": 1,
+      "gender": null,
+      "emoji": "👨",
+      "note": "The 'ą' sounds like 'on'. Pronounced 'Mon-zh'."
+    },
+    {
+      "id": "p1_32",
+      "category": "Nasal Vowels (Ą & Ę)",
+      "pl": "Wąż",
+      "en": "Snake",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐍",
+      "note": "Pronounced 'Von-zh'."
+    },
+    {
+      "id": "p1_33",
+      "category": "Nasal Vowels (Ą & Ę)",
+      "pl": "Pająk",
+      "en": "Spider",
+      "level": 1,
+      "gender": null,
+      "emoji": "🕷️",
+      "note": "Pronounced 'Pa-yonk'."
+    },
+    {
+      "id": "p1_34",
+      "category": "Nasal Vowels (Ą & Ę)",
+      "pl": "Ręka",
+      "en": "Hand / Arm",
+      "level": 1,
+      "gender": null,
+      "emoji": "✋",
+      "note": "The 'ę' sounds like 'en'. Pronounced 'Ren-ka'."
+    },
+    {
+      "id": "p1_35",
+      "category": "Nasal Vowels (Ą & Ę)",
+      "pl": "Mięso",
+      "en": "Meat",
+      "level": 1,
+      "gender": null,
+      "emoji": "🥩",
+      "note": "Pronounced 'Myen-so'."
+    },
+    {
+      "id": "p1_36",
+      "category": "Nasal Vowels (Ą & Ę)",
+      "pl": "Ząb",
+      "en": "Tooth",
+      "level": 1,
+      "gender": null,
+      "emoji": "🦷",
+      "note": "Pronounced 'Zomp' (the b devoices to a p at the end of the word)."
+    },
+    {
+      "id": "p1_37",
+      "category": "The CH and H Sounds",
+      "pl": "Chleb",
+      "en": "Bread",
+      "level": 1,
+      "gender": null,
+      "emoji": "🍞",
+      "note": "The digraph 'ch' sounds exactly like a strong, raspy 'h'."
+    },
+    {
+      "id": "p1_38",
+      "category": "The CH and H Sounds",
+      "pl": "Chmura",
+      "en": "Cloud",
+      "level": 1,
+      "gender": null,
+      "emoji": "☁️",
+      "note": "Pronounced 'H-moo-ra'."
+    },
+    {
+      "id": "p1_39",
+      "category": "The CH and H Sounds",
+      "pl": "Dach",
+      "en": "Roof",
+      "level": 1,
+      "gender": null,
+      "emoji": "🏠",
+      "note": "Great practice for ending a word on the raspy 'h' sound."
+    },
+    {
+      "id": "p1_40",
+      "category": "The CH and H Sounds",
+      "pl": "Herbata",
+      "en": "Tea",
+      "level": 1,
+      "gender": null,
+      "emoji": "🍵",
+      "note": "The standalone 'h' sounds exactly identical to 'ch'. There is no difference in modern Polish."
+    },
+    {
+      "id": "p1_41",
+      "category": "The CH and H Sounds",
+      "pl": "Historia",
+      "en": "History / Story",
+      "level": 1,
+      "gender": null,
+      "emoji": "📖",
+      "note": "Pronounced 'Hee-sto-rya'."
+    },
+    {
+      "id": "p1_42",
+      "category": "Voiced vs Unvoiced",
+      "pl": "Buty",
+      "en": "Shoes",
+      "level": 1,
+      "gender": null,
+      "emoji": "👞",
+      "note": "A voiced 'b' sound. Straightforward."
+    },
+    {
+      "id": "p1_43",
+      "category": "Voiced vs Unvoiced",
+      "pl": "Pies",
+      "en": "Dog",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐕",
+      "note": "An unvoiced 'p' sound."
+    },
+    {
+      "id": "p1_44",
+      "category": "Voiced vs Unvoiced",
+      "pl": "Dom",
+      "en": "House",
+      "level": 1,
+      "gender": null,
+      "emoji": "🏡",
+      "note": "A voiced 'd' sound."
+    },
+    {
+      "id": "p1_45",
+      "category": "Voiced vs Unvoiced",
+      "pl": "Ptak",
+      "en": "Bird",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐦",
+      "note": "An unvoiced 't' sound following an unvoiced 'p'."
+    },
+    {
+      "id": "p1_46",
+      "category": "Voiced vs Unvoiced",
+      "pl": "Głos",
+      "en": "Voice",
+      "level": 1,
+      "gender": null,
+      "emoji": "🗣️",
+      "note": "A voiced 'g' sound."
+    },
+    {
+      "id": "p1_47",
+      "category": "Voiced vs Unvoiced",
+      "pl": "Kot",
+      "en": "Cat",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐈",
+      "note": "An unvoiced 'k' sound."
+    },
+    {
+      "id": "p1_48",
+      "category": "The V & F Sounds",
+      "pl": "Woda",
+      "en": "Water",
+      "level": 1,
+      "gender": null,
+      "emoji": "💧",
+      "note": "The Polish 'w' is always pronounced like an English 'v'."
+    },
+    {
+      "id": "p1_49",
+      "category": "The V & F Sounds",
+      "pl": "Wiatr",
+      "en": "Wind",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌬️",
+      "note": "Pronounced 'Vya-tr'."
+    },
+    {
+      "id": "p1_50",
+      "category": "The V & F Sounds",
+      "pl": "Kwiat",
+      "en": "Flower",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌻",
+      "note": "Pronunciation Secret: Because 'k' is unvoiced, it steals the voice from 'w', making it sound like an 'f'. Pronounced 'K-fyat'."
+    },
+    {
+      "id": "p1_51",
+      "category": "The V & F Sounds",
+      "pl": "Kawa",
+      "en": "Coffee",
+      "level": 1,
+      "gender": null,
+      "emoji": "☕",
+      "note": "Pronounced 'Ka-va'."
+    },
+    {
+      "id": "p1_52",
+      "category": "The V & F Sounds",
+      "pl": "Fotel",
+      "en": "Armchair",
+      "level": 1,
+      "gender": null,
+      "emoji": "🪑",
+      "note": "The 'f' is straightforward and sounds exactly like English."
+    },
+    {
+      "id": "p1_53",
+      "category": "Consonant Clusters",
+      "pl": "Wszystko",
+      "en": "Everything",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌌",
+      "note": "Secret rule again! The voiceless 'sz' turns the 'w' into an 'f'. Pronounced 'Fshyst-ko'."
+    },
+    {
+      "id": "p1_54",
+      "category": "Consonant Clusters",
+      "pl": "Przepraszam",
+      "en": "Sorry / Excuse me",
+      "level": 1,
+      "gender": null,
+      "emoji": "🙇",
+      "note": "Secret rule: After 'p' or 't', the 'rz' loses its voice and sounds like 'sz'. Pronounced 'Pshe-pra-sham'."
+    },
+    {
+      "id": "p1_55",
+      "category": "Consonant Clusters",
+      "pl": "Pszczoła",
+      "en": "Bee",
+      "level": 1,
+      "gender": null,
+      "emoji": "🐝",
+      "note": "A heavy cluster. Pronounced 'Psh-cho-wa'."
+    },
+    {
+      "id": "p1_56",
+      "category": "Consonant Clusters",
+      "pl": "Jabłko",
+      "en": "Apple",
+      "level": 1,
+      "gender": null,
+      "emoji": "🍏",
+      "note": "The unvoiced 'k' turns the 'b' into a 'p'. Pronounced 'Yap-ko'."
+    },
+    {
+      "id": "p1_57",
+      "category": "Consonant Clusters",
+      "pl": "Krzesło",
+      "en": "Chair",
+      "level": 1,
+      "gender": null,
+      "emoji": "🪑",
+      "note": "Just like 'przepraszam', the 'k' forces 'rz' to sound like 'sz'. Pronounced 'K-she-swo'."
+    },
+    {
+      "id": "p1_58",
+      "category": "Consonant Clusters",
+      "pl": "Książka",
+      "en": "Book",
+      "level": 1,
+      "gender": null,
+      "emoji": "📘",
+      "note": "Pronounced 'K-shonz-ka'."
+    },
+    {
+      "id": "p1_59",
+      "category": "Tongue Twisters",
+      "pl": "Chrząszcz",
+      "en": "Beetle",
+      "level": 1,
+      "gender": null,
+      "emoji": "🪲",
+      "note": "From the most famous Polish tongue twister! Starts with the raspy 'ch', followed by 'rz' (sounding like 'sz' due to the ch), the nasal 'ą', and 'szcz'."
+    },
+    {
+      "id": "p1_60",
+      "category": "Tongue Twisters",
+      "pl": "Szczęście",
+      "en": "Happiness / Luck",
+      "level": 1,
+      "gender": null,
+      "emoji": "🍀",
+      "note": "A masterpiece of hissing sounds. 'Sz' + 'cz' + 'ę' + 'ś' + 'ci' + 'e'. Good luck!"
+    },
+    {
+      "id": "p1_61",
+      "category": "Tongue Twisters",
+      "pl": "Trzcina",
+      "en": "Reed",
+      "level": 1,
+      "gender": null,
+      "emoji": "🌾",
+      "note": "The 't' forces 'rz' to sound like 'sz'. Pronounced 'T-sh-chee-na'."
+    },
+    {
+      "id": "p1_62",
+      "category": "Tongue Twisters",
+      "pl": "Dżdżownica",
+      "en": "Earthworm",
+      "level": 1,
+      "gender": null,
+      "emoji": "🪱",
+      "note": "Look at those 'dż's! Pronounced 'J-jo-vnee-tsa'."
+    },
+    {
+      "id": "p1_63",
+      "category": "Polish Nuances",
+      "pl": "Cześć",
+      "en": "Hi / Bye",
+      "level": 1,
+      "gender": null,
+      "emoji": "👋",
+      "note": "The ultimate Polish greeting. Ends with the incredibly soft 'ść' sound."
+    },
+    {
+      "id": "p1_64",
+      "category": "Polish Nuances",
+      "pl": "Oczywiście",
+      "en": "Of course",
+      "level": 1,
+      "gender": null,
+      "emoji": "👌",
+      "note": "A very common agreement word. Note the hard 'cz' contrasting with the soft 'ście'."
+    },
+    {
+      "id": "p1_65",
+      "category": "Polish Nuances",
+      "pl": "Dziewczyna",
+      "en": "Girl / Girlfriend",
+      "level": 1,
+      "gender": null,
+      "emoji": "👧",
+      "note": "Starts with the soft 'dź' (from dzi) and contains the 'w' sounding like an 'f' due to the voiceless 'cz'."
+    },
+    {
+      "id": "p1_66",
+      "category": "Polish Nuances",
+      "pl": "Północ",
+      "en": "Midnight / North",
+      "level": 1,
+      "gender": null,
+      "emoji": "🕛",
+      "note": "The 'ó' (o with a dash) sounds exactly like 'u' (oo). Pronounced 'Poo-nots'."
+    },
+    {
+      "id": "p1_67",
+      "category": "Polish Nuances",
+      "pl": "Gżegżółka",
+      "en": "Cuckoo bird (rare spelling)",
+      "level": 1,
+      "gender": null,
+      "emoji": "🕊️",
+      "note": "A famous spelling trap for native Poles! It uses 'ż' instead of the expected 'rz'."
+    },
+    {
+      "id": "p1_68",
+      "category": "Polish Nuances",
+      "pl": "Kobieta",
+      "en": "Woman",
+      "level": 1,
+      "gender": null,
+      "emoji": "👩",
+      "note": "A core vocabulary word. The 'i' softens the 'b'."
+    },
+    {
+      "id": "p1_69",
+      "category": "Polish Nuances",
+      "pl": "Mężczyzna",
+      "en": "Man",
+      "level": 1,
+      "gender": null,
+      "emoji": "👨",
+      "note": "Pronounced 'Men-sh-chiz-na'. Contains the nasal 'ę', hard 'sz', hard 'cz', and 'y'."
+    },
+    {
+      "id": "p1_70",
+      "category": "Polish Nuances",
+      "pl": "Język",
+      "en": "Language / Tongue",
+      "level": 1,
+      "gender": null,
+      "emoji": "👅",
+      "note": "Pronounced 'Yen-zik'. Knowing this word is the first step to mastering the Polish language!"
+    }
+  ]
+}
