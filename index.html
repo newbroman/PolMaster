@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluent Polish App</title>
+    <style>
+        :root {
+            --primary: #dc143c; /* Polish Red */
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --success: #00b894;
+            --fail: #d63031;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--bg-color); color: var(--text-dark); display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; }
+
+        header { width: 100%; max-width: 500px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        
+        select { padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; width: 60%; cursor: pointer;}
+        
+        .toggle-container { display: flex; align-items: center; gap: 8px; font-weight: bold; color: var(--text-light);}
+
+        /* Flashcard Container */
+        .flashcard-container { width: 100%; max-width: 500px; perspective: 1000px; margin-bottom: 20px; }
+        
+        .flashcard { width: 100%; min-height: 350px; background-color: var(--card-bg); border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 30px; text-align: center; position: relative; transition: transform 0.6s; transform-style: preserve-3d; }
+
+        .emoji { font-size: 4rem; margin-bottom: 15px; transition: 0.3s; }
+        .english-text { font-size: 1.5rem; color: var(--text-light); margin-bottom: 20px; transition: 0.3s; }
+        
+        .polish-container { display: none; flex-direction: column; align-items: center; width: 100%; border-top: 2px dashed #eee; padding-top: 20px; margin-top: 10px; }
+        .polish-text { font-size: 2rem; font-weight: bold; color: var(--primary); margin-bottom: 15px; }
+
+        /* Buttons */
+        .btn { padding: 12px 24px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; font-weight: bold; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        .btn-reveal { background-color: var(--primary); color: white; width: 100%; max-width: 500px; padding: 15px; font-size: 1.2rem; }
+        
+        .controls { display: none; width: 100%; max-width: 500px; justify-content: space-between; gap: 10px; }
+        .btn-got-it { background-color: var(--success); color: white; flex: 1; }
+        .btn-missed { background-color: var(--fail); color: white; flex: 1; }
+        
+        .tools { display: flex; gap: 10px; margin-bottom: 15px; }
+        .btn-tool { background-color: #dfe6e9; color: var(--text-dark); padding: 8px 15px; font-size: 0.9rem; }
+
+        .hint-box { display: none; background-color: #fff9c4; color: #b38b00; padding: 15px; border-radius: 8px; font-size: 0.95rem; margin-bottom: 15px; width: 100%; border-left: 4px solid #fdcb6e; text-align: left;}
+
+        /* Visual Mode Active State */
+        body.visual-mode .english-text { display: none; }
+        body.visual-mode .emoji { font-size: 6rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <select id="levelSelect" onchange="loadLevel()">
+            <option value="" disabled selected>Select a Level...</option>
+            </select>
+        <div class="toggle-container">
+            <span>🙈 Visual Mode</span>
+            <input type="checkbox" id="visualToggle" onchange="toggleVisualMode()">
+        </div>
+    </header>
+
+    <div class="flashcard-container">
+        <div class="flashcard" id="flashcard">
+            <div class="emoji" id="cardEmoji">👋</div>
+            <div class="english-text" id="cardEnglish">Load a level to begin!</div>
+            
+            <div class="polish-container" id="polishSide">
+                <div class="tools">
+                    <button class="btn btn-tool" onclick="playAudio()">🗣️ Listen</button>
+                    <button class="btn btn-tool" onclick="showHint()">💡 Grammar Hint</button>
+                </div>
+                <div class="hint-box" id="cardHint"></div>
+                <div class="polish-text" id="cardPolish">Wybierz poziom</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-reveal" id="revealBtn" onclick="revealCard()">Reveal Answer</button>
+    
+    <div class="controls" id="evalControls">
+        <button class="btn btn-missed" onclick="nextCard(false)">❌ Missed it</button>
+        <button class="btn btn-got-it" onclick="nextCard(true)">✅ Got it</button>
+    </div>
+
+    <script>
+        // App State
+        let currentDeck = [];
+        let currentIndex = 0;
+        let isRevealed = false;
+        let currentCardData = null;
+
+        // Initialize App
+        window.onload = () => {
+            const select = document.getElementById('levelSelect');
+            // Support normal levels and .1 levels
+            const levelSequence = [
+                1, 2, "2.1", 3, 4, 5, 6, 7, 8, 9, 10, "10.1", 11, 12, 13, "13.1", 
+                14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33
+            ];
+            
+            levelSequence.forEach(num => {
+                let option = document.createElement('option');
+                option.value = num;
+                option.innerText = `Level ${num}`;
+                select.appendChild(option);
+            });
+        };
+
+        // Fetch the JSON file for the selected level
+        async function loadLevel() {
+            const levelNum = document.getElementById('levelSelect').value;
+            if (!levelNum) return;
+
+            try {
+                const response = await fetch(`phrases_${levelNum}.json`);
+                if (!response.ok) throw new Error("File not found");
+                
+                const data = await response.json();
+                
+                // Shuffle the deck for Spaced Repetition feel
+                currentDeck = data.phrases.sort(() => Math.random() - 0.5);
+                currentIndex = 0;
+                
+                renderCard();
+            } catch (error) {
+                alert(`Error loading Level ${levelNum}. Make sure phrases_${levelNum}.json is in the same folder and you are running a local server!`);
+            }
+        }
+
+        // Display the current card
+        function renderCard() {
+            if (currentIndex >= currentDeck.length) {
+                document.getElementById('cardEnglish').innerText = "🎉 Deck Complete!";
+                document.getElementById('cardEmoji').innerText = "🏆";
+                document.getElementById('revealBtn').style.display = 'none';
+                document.getElementById('evalControls').style.display = 'none';
+                return;
+            }
+
+            currentCardData = currentDeck[currentIndex];
+            isRevealed = false;
+
+            // Reset UI
+            document.getElementById('cardEmoji').innerText = currentCardData.emoji || "❓";
+            document.getElementById('cardEnglish').innerText = currentCardData.en;
+            document.getElementById('cardPolish').innerText = currentCardData.pl;
+            document.getElementById('cardHint').innerText = currentCardData.note || "No hint available.";
+            
+            document.getElementById('polishSide').style.display = 'none';
+            document.getElementById('cardHint').style.display = 'none';
+            document.getElementById('revealBtn').style.display = 'block';
+            document.getElementById('evalControls').style.display = 'none';
+        }
+
+        // Show the Polish side
+        function revealCard() {
+            if (!currentCardData) return;
+            isRevealed = true;
+            
+            document.getElementById('polishSide').style.display = 'flex';
+            document.getElementById('revealBtn').style.display = 'none';
+            document.getElementById('evalControls').style.display = 'flex';
+            
+            // Optional: Auto-play audio on reveal
+            playAudio();
+        }
+
+        // Basic SRS Logic: If missed, push to end of array to review again
+        function nextCard(success) {
+            if (!success) {
+                // Clone the card and push it to the end so you see it again
+                currentDeck.push(currentCardData);
+            }
+            currentIndex++;
+            renderCard();
+        }
+
+        // Text to Speech
+        function playAudio() {
+            if (!currentCardData || !window.speechSynthesis) return;
+            
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+            
+            let utterance = new SpeechSynthesisUtterance(currentCardData.pl);
+            utterance.lang = 'pl-PL'; // Native Polish accent
+            utterance.rate = 0.9; // Slightly slower for learning
+            
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Show Grammar Hint
+        function showHint() {
+            document.getElementById('cardHint').style.display = 'block';
+        }
+
+        // Phase 4: Toggle English text visibility
+        function toggleVisualMode() {
+            const isVisual = document.getElementById('visualToggle').checked;
+            if (isVisual) {
+                document.body.classList.add('visual-mode');
+            } else {
+                document.body.classList.remove('visual-mode');
+            }
+        }
+        
+        // Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                if (!isRevealed && currentCardData) revealCard();
+            } else if (e.key === '1' && isRevealed) {
+                nextCard(false); // Press 1 for Missed
+            } else if (e.key === '2' && isRevealed) {
+                nextCard(true); // Press 2 for Got It
+            }
+        });
+    </script>
+</body>
+</html>
