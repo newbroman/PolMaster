@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Polish Phrase Master v18.0</title>
 
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f7f6">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f0f2f5">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
 
     <link rel="icon" href="icon-192.png">
     <link rel="apple-touch-icon" href="icon-192.png">
@@ -55,24 +55,46 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* HEADER */
+        .header {
+            width: 100%;
+            background: var(--bg);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1500;
+        }
+
+        .points-banner {
+            background: var(--card);
+            text-align: center;
+            padding: 8px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .points-gold { color: var(--gold); text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+
         /* UNIFIED NAVIGATION ROW */
         .navigation-row {
             display: flex;
             align-items: stretch;
             justify-content: center;
             width: 100%;
+            border-bottom: 2px solid #ddd;
             background: var(--card);
             flex-shrink: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 10;
+            box-shadow: var(--shadow-soft);
         }
 
         .nav-icon-btn {
-            width: 60px;
+            width: 55px;
             flex-shrink: 0;
             background: none;
             border: none;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -81,28 +103,13 @@
             transition: background 0.2s;
         }
         .nav-icon-btn:active { background: var(--tile-bg); }
-        .nav-left { border-right: 1px solid #eee; }
-        .nav-right { border-left: 1px solid #eee; }
+        .nav-left { border-right: 1px solid #ddd; }
+        .nav-right { border-left: 1px solid #ddd; }
 
         .mode-tabs { display: flex; flex: 1; }
-        .tab { flex: 1; padding: 8px 2px; text-align: center; font-size: 0.7rem; font-weight: 800; cursor: pointer; opacity: 0.4; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2; border-bottom: 3px solid transparent;}
+        .tab { flex: 1; padding: 10px 2px; text-align: center; font-size: 0.75rem; font-weight: 800; cursor: pointer; opacity: 0.4; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2; border-bottom: 3px solid transparent;}
         .tab.active { opacity: 1; border-bottom: 3px solid var(--pol-red); color: var(--pol-red); }
-
-        .points-banner {
-            background: var(--card);
-            text-align: center;
-            padding: 6px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            color: #666;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-shrink: 0;
-        }
-        .points-gold { color: var(--gold); text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
-
+        
         .progress-wrapper { position: relative; width: 100%; flex-shrink: 0;}
         .progress-container { width: 100%; height: 4px; background: #ddd; }
         #progress-bar { width: 0%; height: 100%; background: var(--pol-red); transition: width 0.3s; }
@@ -117,9 +124,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            gap: 2px;
+            gap: 4px;
             flex-shrink: 0;
-            min-height: 60px;
+            min-height: 65px;
         }
 
         .quiz-top-row {
@@ -149,29 +156,47 @@
         #timer-bar.timer-warning { background: var(--gold); }
         #timer-bar.timer-danger { background: var(--pol-red); }
 
-        /* Main Game Area */
+        /* Main Game Area (Fixing the Collapse Bug) */
         .map-section {
-            flex-grow: 1;
-            padding: 8px;
-            overflow-y: auto; /* Allows lists to scroll, but grid will snap to height */
+            flex: 1 1 0; /* Grow, shrink, basis 0. Prevents scrolling/collapsing */
+            padding: 10px 8px;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
             box-sizing: border-box;
-            min-height: 0; /* Critical for flex shrinking */
         }
 
-        /* 2 COLUMNS x 3 ROWS - Strict Mobile Fit */
+        /* 2 COLUMNS x 3 ROWS */
         .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, minmax(0, 1fr)); /* minmax(0,1fr) ensures it never overflows */
-            gap: 8px;
+            grid-template-rows: repeat(3, 1fr); /* Equal rows */
+            gap: 10px;
             width: 100%;
             max-width: 450px;
-            height: 100%;
+            flex: 1; /* Stretch to fill .map-section */
+            min-height: 350px; /* Crucial: Stops iOS Safari from collapsing to 0 */
             margin: auto 0;
+        }
+        
+        .grid.lvl0 {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto;
+            flex: 0;
+            min-height: auto;
+        }
+
+        /* PHRASE LIST VIEW */
+        .phrase-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 500px;
+            padding-bottom: 20px;
+            height: auto;
         }
 
         .tile {
@@ -187,48 +212,10 @@
             box-shadow: var(--shadow-soft);
             border: 2px solid transparent;
             overflow: hidden;
-            gap: 4px;
             height: 100%;
-            min-height: 0;
         }
         
         .grid .tile:active { transform: scale(0.96); box-shadow: none; }
-
-        .tile-emoji { 
-            font-size: clamp(1.5rem, 4vh, 2.5rem); 
-            line-height: 1.1; 
-        }
-        
-        .tile-text { 
-            font-size: clamp(0.75rem, 2vh, 0.95rem); 
-            font-weight: 800; 
-            line-height: 1.2; 
-            color: var(--text); 
-            word-wrap: break-word; 
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 3; /* Truncates long text gracefully */
-            -webkit-box-orient: vertical;
-        }
-
-        /* Visual Mode Active State */
-        body.visual-mode .grid .tile-text { display: none !important; }
-        body.visual-mode .grid .tile-emoji { font-size: clamp(2.5rem, 7vh, 4rem); }
-
-        .tile.wrong { background: var(--wrong-blue) !important; border-color: var(--wrong-blue); }
-        .tile.wrong .tile-text { color: white; }
-        .tile.mastered-border { border-color: var(--gold); box-shadow: 0 0 8px rgba(241, 196, 15, 0.4); }
-
-        /* PHRASE LIST VIEW (Scrollable) */
-        .phrase-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-            max-width: 500px;
-            padding-bottom: 20px;
-            height: auto;
-        }
 
         .phrase-list .tile {
             height: auto;
@@ -240,7 +227,28 @@
             gap: 15px;
         }
         .phrase-list .tile:active { transform: scale(0.98); }
-        .phrase-list .tile-text { -webkit-line-clamp: unset; } /* Allow full text in list view */
+
+        .tile-emoji { font-size: clamp(1.8rem, 4vh, 2.5rem); line-height: 1.1; margin-bottom: 5px;}
+        .tile-text { 
+            font-size: clamp(0.75rem, 2vh, 0.95rem); 
+            font-weight: 800; 
+            line-height: 1.2; 
+            color: var(--text); 
+            word-wrap: break-word; 
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Truncates very long text smoothly */
+            -webkit-box-orient: vertical;
+        }
+        .phrase-list .tile-text { -webkit-line-clamp: unset; }
+
+        /* Visual Mode Active State */
+        body.visual-mode .grid .tile-text { display: none !important; }
+        body.visual-mode .grid .tile-emoji { font-size: clamp(2.5rem, 6vh, 4rem); margin-bottom: 0;}
+
+        .tile.wrong { background: var(--wrong-blue) !important; border-color: var(--wrong-blue); }
+        .tile.wrong .tile-text { color: white; }
+        .tile.mastered-border { border-color: var(--gold); box-shadow: 0 0 8px rgba(241, 196, 15, 0.4); }
 
         /* Badges for List View */
         .list-badge-container { display: flex; gap: 5px; position: absolute; top: 8px; right: 8px; }
@@ -250,7 +258,6 @@
         .badge-score { background: var(--success-green); }
 
         /* Level 0 Specific styling */
-        .grid.lvl0 { grid-template-columns: repeat(5, 1fr); grid-template-rows: auto; height: auto;}
         .grid.lvl0 .tile { padding: 4px; border-radius: 6px; box-shadow: 0 2px 0px rgba(0, 0, 0, 0.15); height: auto; }
         .lvl0-content { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; width: 100%; }
         .lvl0-big { font-size: 1.2rem; font-weight: 900; color: var(--pol-red); margin-bottom: 2px; }
@@ -277,7 +284,7 @@
         .fc-btn { background: var(--card); border: 1px solid #ccc; padding: 10px 20px; border-radius: 12px; font-weight: bold; font-size: 1.2rem; cursor: pointer; color: var(--text); }
         .fc-counter { font-weight: 800; color: #888; font-size: 1rem; }
 
-        /* Action Footer - Fixed Heights */
+        /* Action Footer */
         .action-footer {
             padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
             display: flex; justify-content: space-around; align-items: stretch; gap: 8px;
@@ -412,10 +419,24 @@
                 </details>
                 <details>
                     <summary>🗣️ Voice & Pronunciation Setup</summary>
-                    <p>Tap <b>Speak (🎤)</b> in the footer to practice pronunciation! If you cannot hear the Polish audio, you need to install the voice package on your device:</p>
-                    <ul>
-                        <li><b>iOS (iPhone/iPad):</b> Use Safari. Go to Settings > Accessibility > Spoken Content > Voices > Polish. Download "Zosia" (Enhanced is best) or "Krzysztof".</li>
-                        <li><b>Android:</b> Use Chrome. Go to Settings > General Management > Text-to-Speech output. Ensure "Speech Services by Google" is selected. Tap the gear icon > Install voice data > Polish.</li>
+                    <p>Tap <b>Speak (🎤)</b> in the footer to practice pronunciation!</p>
+                    <h4 style="margin: 10px 0 5px 0; color:var(--pol-red);">⚙️ Installing High-Quality Voices</h4>
+                    <p>For natural sounding Polish, you must download the native voices to your device OS:</p>
+                    
+                    <h4 style="margin: 10px 0 5px 0;">🍎 Apple (iPhone/iPad):</h4>
+                    <ul style="margin-top:5px; padding-left:20px; font-size:0.9rem;">
+                        <li>Go to <b>Settings > Accessibility > Spoken Content</b>.</li>
+                        <li>Tap <b>Voices</b>, then find <b>Polish</b>.</li>
+                        <li>Download and select <b>Zosia (Enhanced or Premium)</b> or <b>Krzysztof</b>.</li>
+                        <li style="color:var(--pol-red);"><b>Crucial:</b> Make sure your phone's physical "Silent/Ring" switch is set to <b>Ring</b>!</li>
+                    </ul>
+
+                    <h4 style="margin: 10px 0 5px 0;">🤖 Android:</h4>
+                    <ul style="margin-top:5px; padding-left:20px; font-size:0.9rem;">
+                        <li>Go to <b>Settings > General Management</b> (or System).</li>
+                        <li>Tap <b>Text-to-speech output</b>.</li>
+                        <li>Ensure <b>Speech Services by Google</b> is the preferred engine.</li>
+                        <li>Tap the gear icon ⚙️ > <b>Install voice data > Polish</b>.</li>
                     </ul>
                 </details>
             </div>
@@ -498,6 +519,10 @@
         </div>
     </div>
 
+    <div class="header">
+        <div class="points-banner" id="points-display">⭐ Points: 0 | Goal: 0 / 1000 | 🔥 Streak: 0</div>
+    </div>
+
     <div class="navigation-row">
         <button class="nav-icon-btn nav-left" onclick="toggleHelp()">❓</button>
         
@@ -520,8 +545,6 @@
 
         <button class="nav-icon-btn nav-right" onclick="toggleSettings()">⚙️</button>
     </div>
-
-    <div class="points-banner" id="points-display">⭐ Points: 0 | Goal: 0 / 1000 | 🔥 Streak: 0</div>
 
     <div class="progress-wrapper" id="prog-wrapper">
         <div class="progress-container"><div id="progress-bar"></div></div>
@@ -626,7 +649,7 @@
         // TRANSLATIONS
         // ==========================================
         const translations = {
-            en: { title: "Polish Phrase Master", search: "Search dictionary...", correct: "Correct! 🌟", correctSlow: "Correct! (Too slow)", mistake: "Mistake!", tooSlow: "Too slow! ⏱️", study: "STUDY", practice: "PRACTICE", banked: "PHRASES", save: "💾 Save", ready: "Ready?", masteredTitle: "Level Mastered!", masteredText: "You finished this set.", repeatLevel: "Repeat Normal", repeatHard: "Repeat in Hard Mode 🧠", reviewComplete: "Review Complete!", reviewCompleteText: "You have successfully cleared your weak phrases.", needsReview: "Needs Review", backToStart: "Back to Lvl 1", btnSwap: "Swap", btnSpeak: "Speak", uiPrefix: "UI Language", hard: "Hard Mode", hf: "Hands-Free Mode" },
+            en: { title: "Polish Phrase Master", search: "Search dictionary...", correct: "Correct! 🌟", correctSlow: "Correct! (Too slow)", mistake: "Mistake!", tooSlow: "Too slow! ⏱️", study: "STUDY", practice: "PRACTICE", banked: "PHRASES", save: "💾 Save", ready: "Ready?", masteredTitle: "Level Mastered!", masteredText: "You finished this set.", repeatLevel: "Repeat Normal", repeatHard: "Repeat in Hard Mode 🧠", reviewComplete: "Review Complete!", reviewCompleteText: "You have successfully cleared your weak phrases.", needsReview: "Needs Review", backToStart: "Back to Lvl 1", btnSwap: "Swap", btnListen: "Listen", btnSpeak: "Speak", uiPrefix: "UI Language", hard: "Hard Mode", hf: "Hands-Free Mode" },
             pl: { title: "Polskie Zwroty", search: "Szukaj w słowniku...", correct: "Dobrze! 🌟", correctSlow: "Dobrze! (Zbyt wolno)", mistake: "Błąd!", tooSlow: "Zbyt wolno! ⏱️", study: "NAUKA", practice: "TRENING", banked: "ZWROTY", save: "💾 Zapisz", ready: "Gotowy?", masteredTitle: "Poziom opanowany!", masteredText: "Ukończyłeś tę kategorię.", repeatLevel: "Powtórz (Normalny)", repeatHard: "Powtórz w trybie trudnym 🧠", reviewComplete: "Powtórka Zakończona!", reviewCompleteText: "Pomyślnie powtórzyłeś wszystkie trudne słowa.", needsReview: "Do Powtórki", backToStart: "Wróc do startu", btnSwap: "Zamień", btnSpeak: "Mów", uiPrefix: "Język", hard: "Trudny", hf: "Tryb Bez Rąk" }
         };
         function t(key) { return translations[uiLang][key] || key; }
@@ -844,7 +867,7 @@
             if (matches.length > 0) {
                 matches.forEach(p => {
                     const item = document.createElement('div'); item.className = 'global-result-item';
-                    item.innerHTML = `<div style="flex:1; text-align:left;"><b>${p.pl}</b><br><small>${p.en}</small></div><div style="text-align:right; display:flex; align-items:center; gap:8px;"><span style="font-size:0.7rem; color:var(--pol-red); font-weight:bold;">LVL ${p.lvl}</span><button class="btn-translate" style="width:auto; padding:6px 10px; margin:0;" onclick="translateAndAdd('${p.pl.replace(/'/g, "\\'")}', 'pl|en', event)">➕</button></div>`;
+                    item.innerHTML = `<div style="flex:1; text-align:left;"><b>${p.pl}</b><br><small>${p.en}</small></div><div style="text-align:right; display:flex; align-items:center; gap:8px;"><span style="font-size:0.7rem; color:var(--pol-red); font-weight:bold;">LVL ${p.lvl}</span><button class="btn-translate" style="width:auto; padding:8px;" onclick="translateAndAdd('${p.pl.replace(/'/g, "\\'")}', 'pl|en', event)">➕</button></div>`;
                     item.onclick = () => { selectLevel(p.lvl); toggleSettings();};
                     listArea.appendChild(item);
                 });
