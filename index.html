@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Polish Phrase Master v18.0</title>
 
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f0f2f5">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f7f6">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212">
 
     <link rel="icon" href="icon-192.png">
     <link rel="apple-touch-icon" href="icon-192.png">
@@ -55,57 +55,16 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* HEADER & FLAG */
-        .header {
-            width: 100%;
-            background: var(--bg);
-            flex-shrink: 0;
-            position: relative;
-            z-index: 1500;
-        }
-
-        .title-banner {
-            background: linear-gradient(to bottom, #ffffff 50%, #dc143c 50%);
-            padding: 12px 15px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .title {
-            font-weight: 900;
-            font-size: 1.2rem;
-            color: #1a1a1a;
-            text-align: center;
-            margin: 0;
-            text-shadow: 0px 0px 4px #ffffff, 0px 0px 2px #ffffff;
-        }
-
-        .points-banner {
-            background: var(--card);
-            text-align: center;
-            padding: 6px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            color: #666;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .points-gold { color: var(--gold); text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
-
         /* UNIFIED NAVIGATION ROW */
         .navigation-row {
             display: flex;
             align-items: stretch;
             justify-content: center;
             width: 100%;
-            border-bottom: 2px solid #ddd;
             background: var(--card);
             flex-shrink: 0;
-            box-shadow: var(--shadow-soft);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 10;
         }
 
         .nav-icon-btn {
@@ -128,6 +87,21 @@
         .mode-tabs { display: flex; flex: 1; }
         .tab { flex: 1; padding: 8px 2px; text-align: center; font-size: 0.7rem; font-weight: 800; cursor: pointer; opacity: 0.4; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2; border-bottom: 3px solid transparent;}
         .tab.active { opacity: 1; border-bottom: 3px solid var(--pol-red); color: var(--pol-red); }
+
+        .points-banner {
+            background: var(--card);
+            text-align: center;
+            padding: 6px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #666;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .points-gold { color: var(--gold); text-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
 
         .progress-wrapper { position: relative; width: 100%; flex-shrink: 0;}
         .progress-container { width: 100%; height: 4px; background: #ddd; }
@@ -179,40 +153,25 @@
         .map-section {
             flex-grow: 1;
             padding: 8px;
-            overflow-y: auto;
+            overflow-y: auto; /* Allows lists to scroll, but grid will snap to height */
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
             box-sizing: border-box;
+            min-height: 0; /* Critical for flex shrinking */
         }
 
-        /* 2 COLUMNS x 3 ROWS */
+        /* 2 COLUMNS x 3 ROWS - Strict Mobile Fit */
         .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(3, minmax(0, 1fr)); /* minmax(0,1fr) ensures it never overflows */
             gap: 8px;
             width: 100%;
             max-width: 450px;
             height: 100%;
-            max-height: 450px;
             margin: auto 0;
-        }
-        
-        .grid.lvl0 {
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: auto;
-        }
-
-        /* PHRASE LIST VIEW */
-        .phrase-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-            max-width: 500px;
-            padding-bottom: 20px;
         }
 
         .tile {
@@ -229,13 +188,50 @@
             border: 2px solid transparent;
             overflow: hidden;
             gap: 4px;
+            height: 100%;
+            min-height: 0;
         }
         
-        .grid .tile { aspect-ratio: 1/1; }
         .grid .tile:active { transform: scale(0.96); box-shadow: none; }
 
+        .tile-emoji { 
+            font-size: clamp(1.5rem, 4vh, 2.5rem); 
+            line-height: 1.1; 
+        }
+        
+        .tile-text { 
+            font-size: clamp(0.75rem, 2vh, 0.95rem); 
+            font-weight: 800; 
+            line-height: 1.2; 
+            color: var(--text); 
+            word-wrap: break-word; 
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Truncates long text gracefully */
+            -webkit-box-orient: vertical;
+        }
+
+        /* Visual Mode Active State */
+        body.visual-mode .grid .tile-text { display: none !important; }
+        body.visual-mode .grid .tile-emoji { font-size: clamp(2.5rem, 7vh, 4rem); }
+
+        .tile.wrong { background: var(--wrong-blue) !important; border-color: var(--wrong-blue); }
+        .tile.wrong .tile-text { color: white; }
+        .tile.mastered-border { border-color: var(--gold); box-shadow: 0 0 8px rgba(241, 196, 15, 0.4); }
+
+        /* PHRASE LIST VIEW (Scrollable) */
+        .phrase-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 500px;
+            padding-bottom: 20px;
+            height: auto;
+        }
+
         .phrase-list .tile {
-            aspect-ratio: auto;
+            height: auto;
             flex-direction: row;
             justify-content: flex-start;
             text-align: left;
@@ -244,17 +240,7 @@
             gap: 15px;
         }
         .phrase-list .tile:active { transform: scale(0.98); }
-
-        .tile-emoji { font-size: 2rem; line-height: 1; }
-        .tile-text { font-size: 0.85rem; font-weight: 800; line-height: 1.1; color: var(--text); word-wrap: break-word; }
-
-        /* Visual Mode Active State */
-        body.visual-mode .grid .tile-text { display: none !important; }
-        body.visual-mode .grid .tile-emoji { font-size: 3.5rem; }
-
-        .tile.wrong { background: var(--wrong-blue) !important; border-color: var(--wrong-blue); }
-        .tile.wrong .tile-text { color: white; }
-        .tile.mastered-border { border-color: var(--gold); box-shadow: 0 0 8px rgba(241, 196, 15, 0.4); }
+        .phrase-list .tile-text { -webkit-line-clamp: unset; } /* Allow full text in list view */
 
         /* Badges for List View */
         .list-badge-container { display: flex; gap: 5px; position: absolute; top: 8px; right: 8px; }
@@ -264,7 +250,8 @@
         .badge-score { background: var(--success-green); }
 
         /* Level 0 Specific styling */
-        .grid.lvl0 .tile { padding: 4px; border-radius: 6px; box-shadow: 0 2px 0px rgba(0, 0, 0, 0.15); }
+        .grid.lvl0 { grid-template-columns: repeat(5, 1fr); grid-template-rows: auto; height: auto;}
+        .grid.lvl0 .tile { padding: 4px; border-radius: 6px; box-shadow: 0 2px 0px rgba(0, 0, 0, 0.15); height: auto; }
         .lvl0-content { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; width: 100%; }
         .lvl0-big { font-size: 1.2rem; font-weight: 900; color: var(--pol-red); margin-bottom: 2px; }
         .lvl0-sub { font-size: 0.6rem; color: #666; font-weight: bold; }
@@ -511,13 +498,6 @@
         </div>
     </div>
 
-    <div class="header">
-        <div class="title-banner">
-            <h1 class="title" id="app-title">Polish Phrase Master</h1>
-        </div>
-        <div class="points-banner" id="points-display">⭐ Points: 0 | Goal: 0 / 1000 | 🔥 Streak: 0</div>
-    </div>
-
     <div class="navigation-row">
         <button class="nav-icon-btn nav-left" onclick="toggleHelp()">❓</button>
         
@@ -540,6 +520,8 @@
 
         <button class="nav-icon-btn nav-right" onclick="toggleSettings()">⚙️</button>
     </div>
+
+    <div class="points-banner" id="points-display">⭐ Points: 0 | Goal: 0 / 1000 | 🔥 Streak: 0</div>
 
     <div class="progress-wrapper" id="prog-wrapper">
         <div class="progress-container"><div id="progress-bar"></div></div>
@@ -788,7 +770,6 @@
             const menu = document.getElementById('lvl-menu'); menu.innerHTML = ''; levelList = [];
             const fetchPromises = [];
             
-            // Fast Parallel Fetching to prevent gaps in levels from breaking the app
             for (let major = 0; major <= 40; major++) {
                 fetchPromises.push(
                     fetch(`phrases_${major}.json`, { cache: 'no-store' })
@@ -863,12 +844,12 @@
             if (matches.length > 0) {
                 matches.forEach(p => {
                     const item = document.createElement('div'); item.className = 'global-result-item';
-                    item.innerHTML = `<div style="flex:1;"><b>${p.pl}</b><br><small>${p.en}</small></div><div style="text-align:right; display:flex; align-items:center; gap:8px;"><span style="font-size:0.7rem; color:var(--pol-red); font-weight:bold;">LVL ${p.lvl}</span><button class="btn-translate" style="width:auto; padding:8px;" onclick="translateAndAdd('${p.pl.replace(/'/g, "\\'")}', 'pl|en', event)">➕</button></div>`;
+                    item.innerHTML = `<div style="flex:1; text-align:left;"><b>${p.pl}</b><br><small>${p.en}</small></div><div style="text-align:right; display:flex; align-items:center; gap:8px;"><span style="font-size:0.7rem; color:var(--pol-red); font-weight:bold;">LVL ${p.lvl}</span><button class="btn-translate" style="width:auto; padding:6px 10px; margin:0;" onclick="translateAndAdd('${p.pl.replace(/'/g, "\\'")}', 'pl|en', event)">➕</button></div>`;
                     item.onclick = () => { selectLevel(p.lvl); toggleSettings();};
                     listArea.appendChild(item);
                 });
             } else {
-                listArea.innerHTML = `<div class='translate-prompt'><div style="font-size:0.9rem; color:#666;">Not found.</div><b>"${query}"</b><br><button class="btn-translate" onclick="translateAndAdd('${query}', 'en|pl')">Translate to Polish & Save</button></div>`;
+                listArea.innerHTML = `<div class='translate-prompt'><div style="font-size:0.9rem; color:#666;">Not found.</div><b>"${query}"</b><br><button class="btn-translate" onclick="translateAndAdd('${query}', 'en|pl', event)">Translate to Polish & Save</button></div>`;
             }
         }
 
@@ -888,7 +869,7 @@
                 const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${langpair}`);
                 const data = await res.json(); let translated = data.responseData.translatedText;
                 let plText = langpair === 'en|pl' ? translated : text; let enText = langpair === 'en|pl' ? text : translated;
-                customPhrases.phrases.push({ id: "cust_" + Date.now(), pl: plText, en: enText, category: "Custom" });
+                customPhrases.phrases.push({ id: "cust_" + Date.now(), pl: plText, en: enText, category: "Custom", emoji: "⭐" });
                 localStorage.setItem('pl_custom_level', JSON.stringify(customPhrases)); cacheAllPhrases();
                 setTimeout(() => { document.getElementById('search-bar').value = ''; handleSearch(); }, 1000);
                 if (currentLevel === "C") { phrasesData = customPhrases.phrases; refreshActivePool(); updateMap(); updateTabCounts(); }
@@ -908,7 +889,13 @@
 
         function exportCustomLevel() {
             const b = new Blob([JSON.stringify(customPhrases, null, 2)], { type: "application/json" });
-            const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = `phrases_C.json`; a.click();
+            const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = `phrases_C_${Date.now()}.json`; a.click();
+            setTimeout(() => {
+                if (confirm("Download started!\n\nDo you want to wipe your current Sandbox clean to start a new list?")) {
+                    customPhrases.phrases = []; localStorage.setItem('pl_custom_level', JSON.stringify(customPhrases));
+                    if (currentLevel === "C") selectLevel("C");
+                }
+            }, 500);
         }
 
         function refreshActivePool() {
@@ -964,11 +951,13 @@
             if (correctStreak > userData.bestStreak) userData.bestStreak = correctStreak;
             localStorage.setItem('pl_user_data', JSON.stringify(userData)); updatePointsUI();
         }
+        
         function updatePointsUI() { 
             const pd = document.getElementById('points-display'); 
             pd.innerHTML = `⭐ Points: ${userData.totalPoints} | Goal: ${userData.dailyPoints}/1000 | 🔥 Streak: ${correctStreak}`; 
             if(userData.dailyPoints>=1000) pd.classList.add('points-gold'); else pd.classList.remove('points-gold'); 
         }
+        
         function fireConfetti(s) { confetti({ particleCount: s>50?150:50, spread: 70, origin:{y:0.7}, zIndex:5000 }); }
 
         function checkAnswer(phrase, el) {
@@ -982,14 +971,13 @@
                 stats[phrase.pl] = pStat;
                 setTimeout(() => { refreshActivePool(); updateMap(); updateTabCounts(); let vp = activePool.filter(p => p !== null); if(vp.length===0) playSuccess(); else startNewRound(); }, 600);
             } else {
-                correctStreak = 0; basePitch = 220; addPoints(isDistracted ? 0 : -5); playWrongSlide();
+                correctStreak = 0; basePitch = 220; addPoints(isDistracted ? 0 : -5); playWrongSlide(); updatePointsUI();
                 let cStat = stats[currentTarget.pl] || { score: 0, interval: 0, nextReview: 0 };
                 if (cStat.score >= THRESHOLD) { cStat.score = -1; cStat.interval = 0; cStat.nextReview = 0; } else cStat.score = Math.max(MIN_SCORE, cStat.score - 1);
                 stats[currentTarget.pl] = cStat;
                 if(el) el.classList.add('wrong'); document.getElementById('feedback').innerText = t('mistake'); document.getElementById('feedback').style.color = "var(--pol-red)";
                 setTimeout(() => { if(el) el.classList.remove('wrong'); refreshActivePool(); updateMap(); startNewRound(); }, 1000);
             }
-            updatePointsUI();
             localStorage.setItem('pl_mastery_final', JSON.stringify(stats));
         }
 
@@ -1025,7 +1013,6 @@
                 let badgesHtml = '';
 
                 if (!isPractice) {
-                    // PHRASES LIST VIEW - Show full text and badges
                     if (score >= THRESHOLD) { tile.classList.add('mastered-border'); tile.style.border = '2px solid var(--gold)'; }
                     if (score > 0) { badgesHtml += `<div class="list-badge-container"><div class="status-badge badge-score">+${score}</div>`; } 
                     else if (score < 0) { badgesHtml += `<div class="list-badge-container"><div class="status-badge badge-work">Needs Work</div>`; }
@@ -1045,7 +1032,6 @@
                     `;
                     tile.onclick = () => speak(p.pl);
                 } else {
-                    // PRACTICE GRID VIEW
                     if (currentLevel === "0") { tile.innerHTML = `<div class="lvl0-content"><div class="lvl0-big">${p.pl}</div><div class="lvl0-sub">${p.en}</div><div class="lvl0-emoji">${p.e || ''}</div></div>`; } 
                     else { tile.innerHTML = `<div class="tile-emoji">${p.emoji || '💬'}</div><div class="tile-text">${ansText}</div>`; }
 
@@ -1093,7 +1079,8 @@
             while (hfActive && !hfIsPaused && hfIndex < hfPhrases.length) {
                 const p = hfPhrases[hfIndex];
                 document.getElementById('hf-pl').innerText = p.pl; document.getElementById('hf-en').innerText = p.en; document.getElementById('hf-counter').innerText = `${hfIndex + 1} / ${hfPhrases.length}`; document.getElementById('hf-bar').style.width = ((hfIndex / hfPhrases.length) * 100) + "%";
-                
+                if(document.getElementById('hf-emoji')) document.getElementById('hf-emoji').innerText = p.emoji || p.e || "💬";
+
                 let plText = currentLevel === "0" ? p.pl + " jak " + p.word : p.pl;
                 await speakAsync(plText, 1.0); if (hfAbort) break; await sleep(hfPauseDur); if (hfAbort) break;
                 await speakAsync(p.en, 1.0, 'en-US'); if (hfAbort) break; await sleep(hfPauseDur); if (hfAbort) break;
