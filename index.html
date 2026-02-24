@@ -152,11 +152,11 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             align-items: center;
         }
 
-        .q-text { font-size: 1.2rem; font-weight: 900; line-height: 1.1; flex: 1; }
+        .q-text { font-size: 1.2rem; font-weight: 900; line-height: 1.1; flex: 1; padding: 0 10px; }
         .feedback { height: 14px; font-size: 0.8rem; font-weight: bold; }
 
         .hint-btn {
@@ -166,8 +166,9 @@
         }
         
         .action-icon-btn {
-            width: 32px; height: 32px; border-radius: 16px; background: var(--bg); border: 1px solid #ddd; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; color: var(--text);
+            width: 32px; height: 32px; border-radius: 16px; background: var(--bg); border: 1px solid #ddd; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; color: var(--text); flex-shrink: 0;
         }
+        .action-icon-btn:active { transform: scale(0.9); }
 
         .timer-wrapper { width: 100%; max-width: 380px; height: 4px; background: #eee; border-radius: 2px; margin-top: 4px; overflow: hidden; }
         #timer-bar { width: 100%; height: 100%; background: var(--success-green); transition: width 0.05s linear; }
@@ -276,30 +277,30 @@
 
         .flashcard {
             background: var(--card); border: 2px solid var(--pol-red); border-radius: 16px; width: 100%; max-width: 350px;
-            padding: 30px 15px; text-align: center; box-shadow: var(--shadow-soft); position: relative;
+            padding: 40px 15px 30px 15px; text-align: center; box-shadow: var(--shadow-soft); position: relative;
             display: flex; flex-direction: column; align-items: center;
         }
 
         .fc-emoji { font-size: 3.5rem; margin-bottom: 10px; }
         .fc-pl { font-size: 1.8rem; font-weight: 900; color: var(--pol-red); margin-bottom: 10px; line-height: 1.1; word-wrap: break-word;}
         .fc-en { font-size: 1.1rem; color: #888; font-weight: bold; }
-        .fc-audio-btn { background: var(--tile-bg); border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem; cursor: pointer; margin-top: 15px; }
+        .fc-audio-btn { background: var(--tile-bg); border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem; cursor: pointer; margin-top: 20px; }
         
         .fc-controls { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 350px; margin-top: 15px; }
         .fc-btn { background: var(--card); border: 1px solid #ccc; padding: 10px 20px; border-radius: 12px; font-weight: bold; font-size: 1.2rem; cursor: pointer; color: var(--text); }
         .fc-counter { font-weight: 800; color: #888; font-size: 1rem; }
 
-        /* Action Footer */
+        /* Action Footer - Fixed Heights */
         .action-footer {
             padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
-            display: flex; justify-content: space-around; align-items: center; gap: 8px;
-            border-top: 1px solid #ddd; background: var(--card); flex-shrink: 0;
+            display: flex; justify-content: space-around; align-items: stretch; gap: 8px;
+            border-top: 1px solid #ddd; background: var(--card); flex-shrink: 0; min-height: 65px;
         }
 
         .action-btn {
             background: var(--bg); border: 1px solid #ccc; color: var(--text); border-radius: 10px;
-            padding: 8px 0; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-            font-weight: 800; font-size: 0.7rem; cursor: pointer; gap: 2px; box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+            padding: 6px 4px; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.7rem; cursor: pointer; gap: 4px; box-shadow: 0 2px 0 rgba(0,0,0,0.05); text-align: center;
         }
         .action-btn:active { transform: translateY(2px); box-shadow: none; }
         .action-icon { font-size: 1.3rem; margin: 0; }
@@ -307,7 +308,7 @@
 
         /* Modals & Settings */
         .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 4000; display: none; align-items: center; justify-content: center; }
-        .modal-container { background: var(--bg); color: var(--text); border-radius: 16px; width: 92%; max-width: 400px; max-height: 80dvh; display: flex; flex-direction: column; overflow: hidden; }
+        .modal-container { background: var(--bg); color: var(--text); border-radius: 16px; width: 92%; max-width: 400px; max-height: 85dvh; display: flex; flex-direction: column; overflow: hidden; }
         .modal-header { padding: 15px; background: var(--card); border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;}
         .modal-header h2 { margin: 0; color: var(--pol-red); font-size: 1.1rem; font-weight: 900; }
         .modal-close { background: none; border: none; font-size: 1.5rem; color: #888; cursor: pointer; padding: 0; line-height: 1; }
@@ -323,7 +324,7 @@
 
         /* Dropdowns & Search in Settings */
         .main-dropdown-trigger { width: 100%; background: var(--bg); border: 1px solid #ccc; color: var(--pol-red); padding: 12px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
-        .search-box { width: 100%; background: var(--bg); border: 1px solid var(--pol-red); color: var(--text); padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; outline: none; margin-top: 10px; box-sizing: border-box;}
+        .search-box { width: 100%; background: var(--bg); border: 1px solid var(--pol-red); color: var(--text); padding: 10px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; outline: none; margin-top: 10px; box-sizing: border-box; display: block;}
         .dropdown-menu { position: absolute; top: 60px; left: 12px; right: 12px; background: var(--card); border: 1px solid #ccc; border-radius: 8px; max-height: 250px; overflow-y: auto; z-index: 1000; display: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         .dropdown-menu.show { display: block; }
         .dropdown-item { padding: 12px; font-size: 0.9rem; font-weight: bold; border-bottom: 1px solid #eee; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; align-items: center; }
@@ -347,8 +348,7 @@
         details { background: var(--bg); border: 1px solid #ddd; border-radius: 8px; margin-bottom: 12px; padding: 12px; }
         summary { font-weight: 800; cursor: pointer; color: var(--pol-red); outline: none; font-size: 0.95rem; list-style: none; }
         summary::-webkit-details-marker { display: none; }
-        details p { margin-top: 10px; margin-bottom: 0; font-size: 0.9rem; line-height: 1.4; color: var(--text); }
-        details li { font-size: 0.9rem; margin-top: 5px; color: var(--text); }
+        details p, details ul, details li { margin-top: 10px; margin-bottom: 0; font-size: 0.9rem; line-height: 1.4; color: var(--text); }
         .badge { background: var(--gold); color: #333; padding: 3px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: bold; margin-right: 5px; margin-top: 5px; display: inline-block; }
 
         /* Hands Free */
@@ -424,9 +424,12 @@
                     <p><b>Level R (Daily Due):</b> Automatically fills with words you made mistakes on, AND mastered words due for a review today.</p>
                 </details>
                 <details>
-                    <summary>🎤 Voice Recognition & Controls</summary>
-                    <p>Tap <b>Speak (🎤)</b> in the footer to practice pronunciation!</p>
-                    <p><b>Browser Support:</b> Use <b>Safari</b> on iOS and <b>Chrome</b> on Android for the best microphone support.</p>
+                    <summary>🗣️ Voice & Pronunciation Setup</summary>
+                    <p>Tap <b>Speak (🎤)</b> in the footer to practice pronunciation! If you cannot hear the Polish audio, you need to install the voice package on your device:</p>
+                    <ul>
+                        <li><b>iOS (iPhone/iPad):</b> Use Safari. Go to Settings > Accessibility > Spoken Content > Voices > Polish. Download "Zosia" (Enhanced is best) or "Krzysztof".</li>
+                        <li><b>Android:</b> Use Chrome. Go to Settings > General Management > Text-to-Speech output. Ensure "Speech Services by Google" is selected. Tap the gear icon > Install voice data > Polish.</li>
+                    </ul>
                 </details>
             </div>
         </div>
@@ -458,14 +461,14 @@
                 <div class="settings-section">
                     <h3>👀 Interface</h3>
                     <div class="setting-row">
-                        <span style="font-weight:bold;">🙈 Visual Mode (Emojis)</span>
+                        <span class="setting-label">🙈 Visual Mode (Emojis)</span>
                         <label class="switch">
                             <input type="checkbox" id="visual-toggle" onchange="toggleVisualMode()">
                             <span class="slider"></span>
                         </label>
                     </div>
                     <div class="setting-row">
-                        <span style="font-weight:bold;" id="lbl-ui-lang-label">UI Language</span>
+                        <span class="setting-label" id="lbl-ui-lang-label">UI Language</span>
                         <button class="settings-btn" style="width:auto; margin:0; padding:6px 15px;" onclick="toggleUILang()" id="lbl-ui-lang">EN</button>
                     </div>
                 </div>
@@ -544,9 +547,12 @@
 
     <div class="quiz-header" id="quiz-ui">
         <div class="quiz-top-row">
-            <button class="hint-btn" id="btn-hint" onclick="showHint()" style="display:none;">💡</button>
+            <button class="action-icon-btn" onclick="saveCurrentToCustom()" title="Save to Lvl C">⭐</button>
             <div id="q-text" class="q-text">Ready?</div>
-            <button class="action-icon-btn" onclick="toggleContentSwap()">🔄</button>
+            <div style="display:flex; gap: 8px;">
+                <button class="hint-btn" id="btn-hint" onclick="showHint()" style="display:none;">💡</button>
+                <button class="action-icon-btn" onclick="toggleContentSwap()" title="Swap Language">🔄</button>
+            </div>
         </div>
         <div id="feedback" class="feedback"></div>
         <div class="timer-wrapper"><div id="timer-bar"></div></div>
@@ -557,7 +563,10 @@
 
         <div id="study-view">
             <div class="flashcard" id="study-flashcard">
-                <button class="action-icon-btn" onclick="toggleContentSwap()" style="position:absolute; top:15px; left:15px;">🔄</button>
+                <div style="position:absolute; top:15px; left:15px; display:flex; gap:8px;">
+                    <button class="action-icon-btn" onclick="saveCurrentToCustom()" title="Save to Lvl C">⭐</button>
+                    <button class="action-icon-btn" onclick="toggleContentSwap()" title="Swap Language">🔄</button>
+                </div>
                 <button class="hint-btn" id="fc-hint-btn" onclick="showHint()" style="position:absolute; top:15px; right:15px; display:none;">💡</button>
                 
                 <div class="fc-emoji" id="fc-emoji">👋</div>
@@ -574,17 +583,23 @@
     </div>
 
     <div class="action-footer">
-        <button class="action-btn" id="footer-listen-btn" onclick="handleSpeakerTap()" style="background:var(--success-green); color:white; border-color:var(--success-green); flex: 2; padding: 0 5px;">
-            <span class="action-icon">🔊</span><span id="lbl-btn-listen" style="font-size: 0.85rem;">Listen (1x) - Tap to slow</span>
+        <button class="action-btn" id="footer-listen-btn" onclick="handleSpeakerTap()" style="background:var(--success-green); color:white; border-color:var(--success-green); flex: 1.5;">
+            <span class="action-icon">🔊</span>
+            <span id="lbl-btn-listen" style="line-height:1.2;">Listen (1x)<br><small style="font-weight:normal; font-size:0.65rem;">Double/Triple tap to slow</small></span>
         </button>
-        <button class="action-btn" onclick="togglePauseAudio()" style="flex: 0.5; padding: 0;"><span class="action-icon" id="pause-icon" style="margin:0;">⏸️</span></button>
-        <button class="action-btn" id="mic-btn" onclick="toggleMic()" style="flex: 1;"><span class="action-icon">🎤</span><span id="lbl-btn-speak">Speak</span></button>
+        <button class="action-btn" onclick="togglePauseAudio()" style="flex: 0.5;">
+            <span class="action-icon" id="pause-icon" style="margin:0;">⏸️</span>
+        </button>
+        <button class="action-btn" id="mic-btn" onclick="toggleMic()" style="flex: 1;">
+            <span class="action-icon">🎤</span>
+            <span id="lbl-btn-speak">Speak</span>
+        </button>
         <input type="file" id="file-input" style="display:none" onchange="importProgress(event)">
     </div>
 
     <script>
         // ==========================================
-        // CORE CONSTANTS & STATE (100% PRESERVED)
+        // CORE CONSTANTS & STATE 
         // ==========================================
         const THRESHOLD = 3;
         const MIN_SCORE = -2;
@@ -629,8 +644,8 @@
         // TRANSLATIONS
         // ==========================================
         const translations = {
-            en: { title: "Polish Phrase Master", search: "Search dictionary...", correct: "Correct! 🌟", correctSlow: "Correct! (Too slow)", mistake: "Mistake!", tooSlow: "Too slow! ⏱️", study: "STUDY", practice: "PRACTICE", banked: "PHRASES", save: "💾 Save", ready: "Ready?", masteredTitle: "Level Mastered!", masteredText: "You finished this set.", repeatLevel: "Repeat Normal", repeatHard: "Repeat in Hard Mode 🧠", reviewComplete: "Review Complete!", reviewCompleteText: "You have successfully cleared your weak phrases.", needsReview: "Needs Review", backToStart: "Back to Lvl 1", btnSwap: "Swap", btnListen: "Listen", btnSpeak: "Speak", uiPrefix: "UI Language", hard: "Hard Mode", hf: "Hands-Free Mode" },
-            pl: { title: "Polskie Zwroty", search: "Szukaj w słowniku...", correct: "Dobrze! 🌟", correctSlow: "Dobrze! (Zbyt wolno)", mistake: "Błąd!", tooSlow: "Zbyt wolno! ⏱️", study: "NAUKA", practice: "TRENING", banked: "ZWROTY", save: "💾 Zapisz", ready: "Gotowy?", masteredTitle: "Poziom opanowany!", masteredText: "Ukończyłeś tę kategorię.", repeatLevel: "Powtórz (Normalny)", repeatHard: "Powtórz w trybie trudnym 🧠", reviewComplete: "Powtórka Zakończona!", reviewCompleteText: "Pomyślnie powtórzyłeś wszystkie trudne słowa.", needsReview: "Do Powtórki", backToStart: "Wróc do startu", btnSwap: "Zamień", btnListen: "Słuchaj", btnSpeak: "Mów", uiPrefix: "Język", hard: "Trudny", hf: "Tryb Bez Rąk" }
+            en: { title: "Polish Phrase Master", search: "Search dictionary...", correct: "Correct! 🌟", correctSlow: "Correct! (Too slow)", mistake: "Mistake!", tooSlow: "Too slow! ⏱️", study: "STUDY", practice: "PRACTICE", banked: "PHRASES", save: "💾 Save", ready: "Ready?", masteredTitle: "Level Mastered!", masteredText: "You finished this set.", repeatLevel: "Repeat Normal", repeatHard: "Repeat in Hard Mode 🧠", reviewComplete: "Review Complete!", reviewCompleteText: "You have successfully cleared your weak phrases.", needsReview: "Needs Review", backToStart: "Back to Lvl 1", btnSwap: "Swap", btnSpeak: "Speak", uiPrefix: "UI Language", hard: "Hard Mode", hf: "Hands-Free Mode" },
+            pl: { title: "Polskie Zwroty", search: "Szukaj w słowniku...", correct: "Dobrze! 🌟", correctSlow: "Dobrze! (Zbyt wolno)", mistake: "Błąd!", tooSlow: "Zbyt wolno! ⏱️", study: "NAUKA", practice: "TRENING", banked: "ZWROTY", save: "💾 Zapisz", ready: "Gotowy?", masteredTitle: "Poziom opanowany!", masteredText: "Ukończyłeś tę kategorię.", repeatLevel: "Powtórz (Normalny)", repeatHard: "Powtórz w trybie trudnym 🧠", reviewComplete: "Powtórka Zakończona!", reviewCompleteText: "Pomyślnie powtórzyłeś wszystkie trudne słowa.", needsReview: "Do Powtórki", backToStart: "Wróc do startu", btnSwap: "Zamień", btnSpeak: "Mów", uiPrefix: "Język", hard: "Trudny", hf: "Tryb Bez Rąk" }
         };
         function t(key) { return translations[uiLang][key] || key; }
 
@@ -644,7 +659,6 @@
             if(document.getElementById('lbl-tab-study')) document.getElementById('lbl-tab-study').innerText = t('study');
             if(document.getElementById('lbl-tab-practice')) document.getElementById('lbl-tab-practice').innerText = t('practice');
             if(document.getElementById('lbl-tab-banked')) document.getElementById('lbl-tab-banked').innerText = t('banked');
-            if(document.getElementById('lbl-btn-listen')) document.getElementById('lbl-btn-listen').innerText = t('btnListen');
             if(document.getElementById('lbl-btn-speak')) document.getElementById('lbl-btn-speak').innerText = t('btnSpeak');
             
             updateTabCounts();
@@ -690,8 +704,6 @@
             }
         };
 
-        function getGenderText(p) { return p.pl; } // Gender toggle removed per request
-
         // ==========================================
         // STUDY MODE (FLASHCARDS)
         // ==========================================
@@ -704,7 +716,7 @@
             if (studyIndex >= phrasesData.length) studyIndex = 0;
 
             let p = phrasesData[studyIndex]; currentTarget = p; currentPlaybackSpeed = 1.0;
-            if (document.getElementById('lbl-btn-listen')) document.getElementById('lbl-btn-listen').innerText = 'Listen (1x)';
+            document.getElementById('lbl-btn-listen').innerHTML = `Listen (1x)<br><small style="font-weight:normal; font-size:0.65rem;">Double/Triple tap to slow</small>`;
 
             document.getElementById('fc-emoji').innerText = p.emoji || "💬";
             document.getElementById('fc-pl').innerText = isSwapped ? p.en : p.pl;
@@ -765,7 +777,7 @@
                 checkAnswer(currentTarget, targetTile);
             } else {
                 document.getElementById('feedback').innerText = `Heard: "${transcript}" ❌`; document.getElementById('feedback').style.color = "var(--pol-red)";
-                correctStreak = 0; basePitch = 220; addPoints(-5); playWrongSlide();
+                correctStreak = 0; basePitch = 220; addPoints(-5); playWrongSlide(); updatePointsUI();
                 let cStat = stats[currentTarget.pl] || { score: 0, interval: 0, nextReview: 0 };
                 if (cStat.score >= THRESHOLD) { cStat.score = -1; cStat.interval = 0; cStat.nextReview = 0; } else cStat.score = Math.max(MIN_SCORE, cStat.score - 1);
                 stats[currentTarget.pl] = cStat; localStorage.setItem('pl_mastery_final', JSON.stringify(stats)); updateMap();
@@ -774,12 +786,30 @@
 
         async function scanLibrary() {
             const menu = document.getElementById('lvl-menu'); menu.innerHTML = ''; levelList = [];
-            for (let major = 1; major <= 35; major++) {
-                try { const r = await fetch(`phrases_${major}.json`, { cache: 'no-store' }); if (r.ok) { const data = await r.json(); levelList.push({ id: major.toString(), desc: data.description, data: data }); } } catch(e){}
-                for (let minor = 1; minor <= 5; minor++) {
-                    try { const rMinor = await fetch(`phrases_${major}.${minor}.json`, { cache: 'no-store' }); if (rMinor.ok) { const dataMinor = await rMinor.json(); levelList.push({ id: `${major}.${minor}`, desc: dataMinor.description, data: dataMinor }); } } catch (e) {}
+            const fetchPromises = [];
+            
+            // Fast Parallel Fetching to prevent gaps in levels from breaking the app
+            for (let major = 0; major <= 40; major++) {
+                fetchPromises.push(
+                    fetch(`phrases_${major}.json`, { cache: 'no-store' })
+                        .then(r => r.ok ? r.json() : null)
+                        .then(data => { if(data) levelList.push({ id: major.toString(), desc: data.description || `Level ${major}`, data: data }); })
+                        .catch(e => null)
+                );
+                for (let minor = 1; minor <= 3; minor++) {
+                    let minorId = `${major}.${minor}`;
+                    fetchPromises.push(
+                        fetch(`phrases_${minorId}.json`, { cache: 'no-store' })
+                            .then(r => r.ok ? r.json() : null)
+                            .then(data => { if(data) levelList.push({ id: minorId, desc: data.description || `Level ${minorId}`, data: data }); })
+                            .catch(e => null)
+                    );
                 }
             }
+            
+            await Promise.all(fetchPromises);
+            levelList.sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
+
             levelList.push({ id: "C", desc: customPhrases.description, data: customPhrases });
             cacheAllPhrases();
 
@@ -806,7 +836,6 @@
             currentLevel = lvlId.toString(); localStorage.setItem('pl_current_level_idx', currentLevel);
             document.getElementById('lvl-menu').classList.remove('show');
             document.getElementById('search-results-list').style.display = 'none'; 
-            
             document.getElementById('search-bar').value = '';
 
             if (currentLevel === "R") {
@@ -827,14 +856,9 @@
             const query = document.getElementById('search-bar').value.trim().toLowerCase();
             const listArea = document.getElementById('search-results-list');
             listArea.innerHTML = '';
-            
-            if (!query) { 
-                listArea.style.display = 'none'; 
-                return; 
-            }
+            if (!query) { listArea.style.display = 'none'; return; }
             
             listArea.style.display = 'flex';
-
             const matches = allPhrasesCache.filter(p => p.pl.toLowerCase().includes(query) || p.en.toLowerCase().includes(query)).slice(0, 10);
             if (matches.length > 0) {
                 matches.forEach(p => {
@@ -851,7 +875,6 @@
         async function translateAndAdd(text, langpair, event) {
             if(event) event.stopPropagation();
             try {
-                // If adding from search result
                 if (langpair === 'pl|en') {
                    let existingPhrase = allPhrasesCache.find(p => p.pl === text);
                    if (existingPhrase && !customPhrases.phrases.some(p => p.pl === existingPhrase.pl)) {
@@ -872,6 +895,17 @@
             } catch (e) { alert("Error translating."); }
         }
 
+        function saveCurrentToCustom(event) {
+            if (event) event.stopPropagation();
+            if (!currentTarget) return;
+            if (customPhrases.phrases.some(p => p.pl === currentTarget.pl)) { alert("Already in Lvl C!"); return; }
+            customPhrases.phrases.push({ id: "cust_" + Date.now(), pl: currentTarget.pl, en: currentTarget.en, category: "Saved", emoji: currentTarget.emoji || "⭐", note: currentTarget.note || "" });
+            localStorage.setItem('pl_custom_level', JSON.stringify(customPhrases));
+            const customList = levelList.find(l => l.id === "C"); if (customList) customList.data = customPhrases;
+            cacheAllPhrases();
+            alert("Saved to Sandbox (Lvl C)!");
+        }
+
         function exportCustomLevel() {
             const b = new Blob([JSON.stringify(customPhrases, null, 2)], { type: "application/json" });
             const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = `phrases_C.json`; a.click();
@@ -879,8 +913,6 @@
 
         function refreshActivePool() {
             if (currentLevel === "0") { activePool = phrasesData.filter(p => (stats[p.pl] ? stats[p.pl].score : 0) < THRESHOLD); return; }
-
-            // Updated to 6 tiles for Practice Mode
             if (activePool.length !== 6) activePool = new Array(6).fill(null);
             let unmastered = currentLevel==="R" ? phrasesData.filter(p=>isDueForReview(p)) : phrasesData.filter(p => (stats[p.pl] ? stats[p.pl].score : 0) < THRESHOLD);
             for (let i = 0; i < 6; i++) {
@@ -919,8 +951,7 @@
                     clearInterval(roundTimer); 
                     document.getElementById('feedback').innerText = t('tooSlow'); 
                     document.getElementById('feedback').style.color = "var(--pol-red)";
-                    correctStreak = 0;
-                    updatePointsUI();
+                    correctStreak = 0; updatePointsUI();
                 }
             }, 50);
             setTimeout(() => speak(currentTarget.pl), 300);
@@ -958,6 +989,7 @@
                 if(el) el.classList.add('wrong'); document.getElementById('feedback').innerText = t('mistake'); document.getElementById('feedback').style.color = "var(--pol-red)";
                 setTimeout(() => { if(el) el.classList.remove('wrong'); refreshActivePool(); updateMap(); startNewRound(); }, 1000);
             }
+            updatePointsUI();
             localStorage.setItem('pl_mastery_final', JSON.stringify(stats));
         }
 
@@ -980,7 +1012,6 @@
         function updateMap() {
             const area = document.getElementById('mastery-map'); area.innerHTML = '';
             const isPractice = document.getElementById('tab-learning').classList.contains('active');
-            
             let list = isPractice ? activePool : phrasesData;
 
             list.forEach(p => {
@@ -995,16 +1026,9 @@
 
                 if (!isPractice) {
                     // PHRASES LIST VIEW - Show full text and badges
-                    if (score >= THRESHOLD) {
-                        tile.classList.add('mastered-border');
-                        tile.style.border = '2px solid var(--gold)';
-                    }
-                    if (score > 0) {
-                        badgesHtml += `<div class="list-badge-container"><div class="status-badge badge-score">+${score}</div>`;
-                    } else if (score < 0) {
-                        badgesHtml += `<div class="list-badge-container"><div class="status-badge badge-work">Needs Work</div>`;
-                    }
-                    
+                    if (score >= THRESHOLD) { tile.classList.add('mastered-border'); tile.style.border = '2px solid var(--gold)'; }
+                    if (score > 0) { badgesHtml += `<div class="list-badge-container"><div class="status-badge badge-score">+${score}</div>`; } 
+                    else if (score < 0) { badgesHtml += `<div class="list-badge-container"><div class="status-badge badge-work">Needs Work</div>`; }
                     if (isDueForReview(p) && currentLevel !== "R" && score >= THRESHOLD) {
                         if(!badgesHtml) badgesHtml = `<div class="list-badge-container">`;
                         badgesHtml += `<div class="status-badge badge-due">Due</div>`;
@@ -1022,11 +1046,8 @@
                     tile.onclick = () => speak(p.pl);
                 } else {
                     // PRACTICE GRID VIEW
-                    if (currentLevel === "0") {
-                        tile.innerHTML = `<div class="lvl0-content"><div class="lvl0-big">${p.pl}</div><div class="lvl0-sub">${p.en}</div><div class="lvl0-emoji">${p.e || ''}</div></div>`;
-                    } else {
-                        tile.innerHTML = `<div class="tile-emoji">${p.emoji || '💬'}</div><div class="tile-text">${ansText}</div>`;
-                    }
+                    if (currentLevel === "0") { tile.innerHTML = `<div class="lvl0-content"><div class="lvl0-big">${p.pl}</div><div class="lvl0-sub">${p.en}</div><div class="lvl0-emoji">${p.e || ''}</div></div>`; } 
+                    else { tile.innerHTML = `<div class="tile-emoji">${p.emoji || '💬'}</div><div class="tile-text">${ansText}</div>`; }
 
                     if (score < 0) { tile.style.backgroundColor = `rgba(52, 152, 219, ${(Math.abs(score)/2)+0.4})`; tile.style.color = "white"; }
                     else if (score > 0) { if ((currentLevel==="R" ? !isDueForReview(p) : score >= THRESHOLD)) tile.classList.add('mastered-border'); else tile.style.backgroundColor = `rgba(220, 20, 60, ${score/THRESHOLD*0.3})`; }
@@ -1045,7 +1066,17 @@
             if(document.getElementById('banked-count')) document.getElementById('banked-count').innerText = `(${m})`;
         }
 
-        function handleSpeakerTap() { if(currentTarget) speak(currentLevel === "0" ? currentTarget.pl + " jak " + currentTarget.word : currentTarget.pl); }
+        function handleSpeakerTap() { 
+            if(currentTarget) {
+                speak(currentLevel === "0" ? currentTarget.pl + " jak " + currentTarget.word : currentTarget.pl, currentPlaybackSpeed);
+                if (currentPlaybackSpeed === 1.0) currentPlaybackSpeed = 0.5; 
+                else if (currentPlaybackSpeed === 0.5) currentPlaybackSpeed = 0.25; 
+                else currentPlaybackSpeed = 1.0;
+                
+                let nextLabel = currentPlaybackSpeed === 1.0 ? '1x' : (currentPlaybackSpeed === 0.5 ? '0.5x' : '0.25x');
+                document.getElementById('lbl-btn-listen').innerHTML = `Listen (${nextLabel})<br><small style="font-weight:normal; font-size:0.65rem;">Double/Triple tap to slow</small>`;
+            } 
+        }
         function togglePauseAudio() { if(window.speechSynthesis.speaking || window.speechSynthesis.paused) { let icon = document.getElementById('pause-icon'); if(window.speechSynthesis.paused){window.speechSynthesis.resume(); icon.innerText='⏸️';}else{window.speechSynthesis.pause(); icon.innerText='▶️';} } }
         function downloadProgress() { const b = new Blob([JSON.stringify({ stats, userData })], { type: "text/plain" }); const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = `polish_master.txt`; a.click(); }
         function importProgress(event) { const r = new FileReader(); r.onload = (ev) => { const d = JSON.parse(ev.target.result); stats = d.stats || d; userData = d.userData || userData; localStorage.setItem('pl_mastery_final', JSON.stringify(stats)); localStorage.setItem('pl_user_data', JSON.stringify(userData)); location.reload(); }; r.readAsText(event.target.files[0]); }
@@ -1063,9 +1094,7 @@
                 const p = hfPhrases[hfIndex];
                 document.getElementById('hf-pl').innerText = p.pl; document.getElementById('hf-en').innerText = p.en; document.getElementById('hf-counter').innerText = `${hfIndex + 1} / ${hfPhrases.length}`; document.getElementById('hf-bar').style.width = ((hfIndex / hfPhrases.length) * 100) + "%";
                 
-                if(document.getElementById('hf-emoji')) document.getElementById('hf-emoji').innerText = p.emoji || p.e || "💬";
-
-                let plText = currentLevel === "0" ? p.pl + " jak " + p.word : getGenderText(p);
+                let plText = currentLevel === "0" ? p.pl + " jak " + p.word : p.pl;
                 await speakAsync(plText, 1.0); if (hfAbort) break; await sleep(hfPauseDur); if (hfAbort) break;
                 await speakAsync(p.en, 1.0, 'en-US'); if (hfAbort) break; await sleep(hfPauseDur); if (hfAbort) break;
                 await speakAsync(plText, 0.5); if (hfAbort) break; await sleep(hfPauseDur); if (hfAbort) break;
@@ -1077,7 +1106,7 @@
         function speakAsync(text, rate = 1.0, lang = 'pl-PL') { return new Promise(resolve => { if (hfAbort || hfIsPaused) { resolve(); return; } initAudioContext(); const u = new SpeechSynthesisUtterance(text); u.lang = lang; u.rate = rate; u.onend = () => resolve(); u.onerror = () => resolve(); speechSynthesis.speak(u); }); }
         function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
-        window.onload = () => { initSpeech(); initSpeechRecognition(); addPoints(0); updateUILanguage(); setGender(currentGender, false); scanLibrary(); switchMode('study'); };
+        window.onload = () => { initSpeech(); initSpeechRecognition(); addPoints(0); updateUILanguage(); scanLibrary(); switchMode('study');};
         document.addEventListener('click', initAudioContext, { once: true }); document.addEventListener('touchstart', initAudioContext, { once: true });
     </script>
 </body>
